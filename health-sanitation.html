@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health & Sanitation Ordinances - Barangay Santa Ines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sf-orange: #ff6600;
+      --sf-orange-hover: #e55b00;
+      --sf-dark: #12161a;
+      --sf-dark-card: #1c2228;
+      --sf-dark-border: #2e363e;
+      --sf-light-bg: #f4f6f8;
+      --sf-card-border: #e0e6ed;
+      --sf-text-main: #222831;
+      --sf-text-muted: #5a6578;
+      --sf-blue: #0066cc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', system-ui, sans-serif; }
+    body { background-color: var(--sf-light-bg); color: var(--sf-text-main); line-height: 1.5; }
+
+    /* Top Navigation Header */
+    .top-nav {
+      background-color: var(--sf-dark);
+      color: #ffffff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--sf-orange);
+    }
+    .brand-container { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+    .brand-title { font-size: 19px; font-weight: 800; }
+    .brand-title span { color: var(--sf-orange); }
+
+    /* Banner */
+    .page-header {
+      background: var(--sf-dark-card);
+      color: #ffffff;
+      padding: 30px 24px;
+      border-bottom: 1px solid var(--sf-dark-border);
+    }
+    .container { max-width: 1000px; margin: 0 auto; }
+    .back-link { color: var(--sf-orange); text-decoration: none; font-size: 13px; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+    .back-link:hover { text-decoration: underline; }
+    .page-title { font-size: 28px; font-weight: 800; }
+    .page-subtitle { color: #a0abbd; font-size: 14px; margin-top: 4px; }
+
+    /* Content Area */
+    .main-content { padding: 30px 24px; }
+    .ordinance-card {
+      background: #ffffff;
+      border: 1px solid var(--sf-card-border);
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .ordinance-badge {
+      background: #e2e8f0;
+      color: var(--sf-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .ordinance-title { font-size: 16px; font-weight: 700; color: var(--sf-blue); margin-bottom: 6px; }
+    .ordinance-desc { font-size: 13px; color: #4a5568; }
+    .btn-download {
+      background-color: var(--sf-orange);
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .btn-download:hover { background-color: var(--sf-orange-hover); }
+  </style>
+</head>
+<body>
+
+  <header class="top-nav">
+    <a href="index.html" class="brand-container">
+      <div class="brand-title">SANTA <span>INES</span></div>
+    </a>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <a href="index.html#ordinances" class="back-link">← Back to Portal Directory</a>
+      <h1 class="page-title">Health & Sanitation Ordinances</h1>
+      <p class="page-subtitle">18 Active Legislative Records and Community Health Mandates</p>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Item 1 -->
+      <div class="ordinance-card">
+        <div>
+          <span class="ordinance-badge">Ordinance No. 2024-04</span>
+          <h3 class="ordinance-title">Anti-Dengue & Mosquito Breeding Site Prevention Code</h3>
+          <p class="ordinance-desc">Enforces weekly search-and-destroy protocols for stagnant water containers across all residential compounds and public spaces.</p>
+        </div>
+        <a href="#" class="btn-download">Download PDF</a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="ordinance-card">
+        <div>
+          <span class="ordinance-badge">Ordinance No. 2023-11</span>
+          <h3 class="ordinance-title">Stray Animal Control & Mandatory Anti-Rabies Act</h3>
+          <p class="ordinance-desc">Requires household pet dogs and cats to undergo annual vaccination and mandates leash usage in public thoroughfares.</p>
+        </div>
+        <a href="#" class="btn-download">Download PDF</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barangay Santa Ines - Official Digital Government Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sf-orange: #ff6600;
+      --sf-orange-hover: #e55b00;
+      --sf-dark: #12161a;
+      --sf-dark-card: #1c2228;
+      --sf-dark-border: #2e363e;
+      --sf-light-bg: #f4f6f8;
+      --sf-card-border: #e0e6ed;
+      --sf-text-main: #222831;
+      --sf-text-muted: #5a6578;
+      --sf-blue: #0066cc;
+      --sf-green: #28a745;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--sf-light-bg);
+      color: var(--sf-text-main);
+      line-height: 1.5;
+    }
+
+    /* SourceForge Top Navigation Bar */
+    .top-nav {
+      background-color: var(--sf-dark);
+      color: #ffffff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--sf-orange);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-logo {
+      height: 60px;
+      width: auto;
+      max-width: 80px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-title span {
+      color: var(--sf-orange);
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: #a0abbd;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d1d8e0;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--sf-orange);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .btn-orange {
+      background-color: var(--sf-orange);
+      color: #ffffff;
+    }
+
+    .btn-orange:hover {
+      background-color: var(--sf-orange-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #4a5568;
+      color: #e2e8f0;
+    }
+
+    .btn-outline:hover {
+      border-color: #cbd5e1;
+      color: #ffffff;
+    }
+
+    /* Hero Banner Section (SourceForge Style) */
+    .hero {
+      background: linear-gradient(180deg, rgba(18, 22, 26, 0.85) 0%, rgba(26, 34, 42, 0.92) 100%),
+                  url('797795207_1074725831948232_8622012311038184221_n.jpg') center/cover no-repeat;
+      color: #ffffff;
+      padding: 60px 24px 50px;
+      text-align: center;
+      border-bottom: 1px solid var(--sf-dark-border);
+    }
+
+    .hero-container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero-tagline {
+      display: inline-block;
+      background-color: rgba(255, 102, 0, 0.15);
+      color: var(--sf-orange);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      margin-bottom: 16px;
+      background: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #9aa8bc;
+      margin-bottom: 28px;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Global Search Box */
+    .search-box {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      display: flex;
+      background: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 14px 18px;
+      border: none;
+      font-size: 15px;
+      outline: none;
+      color: var(--sf-text-main);
+    }
+
+    .search-box button {
+      background-color: var(--sf-orange);
+      color: #ffffff;
+      border: none;
+      padding: 0 24px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background-color: var(--sf-orange-hover);
+    }
+
+    /* Live Stats Bar (SourceForge Style Metrics) */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--sf-dark-border);
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #8392a5;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Transition Image Section (Fade Slider) */
+.transition-section {
+  width: 100%;
+  background-color: var(--sf-dark);
+  border-top: 1px solid var(--sf-dark-border);
+  border-bottom: 3px solid var(--sf-orange);
+  position: relative;
+}
+
+.transition-slider-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.transition-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.65) contrast(1.05);
+  transform: scale(1);
+  transition: transform 6s ease;
+}
+
+.slide.active .transition-image {
+  transform: scale(1.04); /* Subtle ambient zoom during active display */
+}
+
+.transition-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 22, 26, 0.2) 0%, rgba(18, 22, 26, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 20px;
+}
+
+.transition-overlay span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sf-orange);
+  margin-bottom: 6px;
+}
+
+.transition-overlay p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e2e8f0;
+  max-width: 650px;
+}
+
+    /* Main Container & Layout */
+    .main-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 28px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--sf-text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+
+    .section-title span {
+      border-bottom: 2px solid var(--sf-orange);
+      margin-bottom: -10px;
+      padding-bottom: 8px;
+    }
+
+    /* Grid of Services/Clearances */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .sf-card {
+      background: #ffffff;
+      border: 1px solid var(--sf-card-border);
+      border-radius: 6px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .sf-card:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+
+    .badge-choice {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: #fff3e6;
+      color: var(--sf-orange);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .card-header-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sf-blue);
+      text-decoration: none;
+      line-height: 1.2;
+    }
+
+    .card-title:hover {
+      text-decoration: underline;
+    }
+
+    .card-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--sf-text-muted);
+      margin-top: 4px;
+    }
+
+    .stars {
+      color: #ffb400;
+      font-size: 13px;
+    }
+
+    .card-description {
+      font-size: 13px;
+      color: #4a5568;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--sf-text-muted);
+      border-top: 1px dotted #e2e8f0;
+      padding-top: 10px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-meta strong {
+      color: var(--sf-text-main);
+    }
+
+    /* Sidebar Styling */
+    .sidebar-widget {
+      background: #ffffff;
+      border: 1px solid var(--sf-card-border);
+      border-radius: 6px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+
+    .widget-title {
+      font-size: 15px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--sf-orange);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      color: var(--sf-text-main);
+    }
+
+    .official-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .official-item:last-child {
+      border-bottom: none;
+    }
+
+    .official-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #475569;
+      font-size: 13px;
+    }
+
+    .official-info h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--sf-text-main);
+    }
+
+    .official-info p {
+      font-size: 11px;
+      color: var(--sf-text-muted);
+    }
+
+    /* Category Directory Layout */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .cat-item {
+      background: #ffffff;
+      border: 1px solid var(--sf-card-border);
+      padding: 12px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sf-blue);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.2s;
+    }
+
+    .cat-item:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    .cat-count {
+      background: #e2e8f0;
+      color: #475569;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    /* Modal System */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-window {
+      background: #ffffff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 580px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      overflow: hidden;
+      transform: translateY(-20px);
+      transition: transform 0.2s ease;
+    }
+
+    .modal-overlay.active .modal-window {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      background: var(--sf-dark);
+      color: #ffffff;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--sf-orange);
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: #a0abbd;
+      font-size: 20px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #ffffff;
+    }
+
+    .modal-body {
+      padding: 20px;
+      max-height: 75vh;
+      overflow-y: auto;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--sf-text-main);
+      text-transform: uppercase;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--sf-orange);
+      box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
+    }
+
+    /* Dynamic Output Area */
+    .output-box {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 4px;
+      padding: 14px;
+      margin-top: 14px;
+      font-size: 13px;
+    }
+
+    /* Footer (SourceForge Footer Style) */
+    footer {
+      background: var(--sf-dark);
+      color: #94a3b8;
+      padding: 40px 24px 20px;
+      border-top: 1px solid var(--sf-dark-border);
+      font-size: 13px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--sf-orange);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--sf-dark-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1e293b;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 4px;
+      border-left: 4px solid var(--sf-orange);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 13px;
+      z-index: 3000;
+      display: none;
+    }
+
+    @media (max-width: 868px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <a href="#" class="brand-container">
+      <img src="brgyLOGO.png" alt="Santa Ines Logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-title">SANTA <span>INES</span></span>
+        <span class="brand-subtitle">e-Barangay Services</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#services">Barangay Services</a></li>
+      <li><a href="#projects">Community Projects</a></li>
+      <li><a href="#directory">Directory</a></li>
+      <li><a href="#ordinances">Ordinances</a></li>
+      <li><a href="javascript:void(0)" onclick="openBlotterModal()">Report Concern</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline" onclick="openTrackModal()">Track Status</button>
+      <button class="btn btn-orange" onclick="openClearanceModal('General Barangay Clearance')">File Application</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>The Complete Barangay E-Governance Portal</h1>
+      <p>Request official barangay clearances, verify resident records, track community infrastructure projects, and access public records in real-time.</p>
+      <strong><p>Working Hours : Mon - Fri (8:00 AM - 5:00 PM) </p></strong>
+      <!-- Global Search Box -->
+      <div class="search-box">
+        <input type="text" id="globalSearch" placeholder="Search for clearances, permits, ordinances, or barangay services..." onkeyup="filterServices()">
+        <button onclick="filterServices()">Search Portal</button>
+      </div>
+
+      <!-- Live Metric Counter Banner -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number">14,820</div>
+          <div class="stat-label">Registered Residents</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="issuedCount">3,492</div>
+          <div class="stat-label">Certificates Issued</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Digital Resolution</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Emergency Desk</div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Multi-Image Cycling Transition Section -->
+<section class="transition-section">
+  <div class="transition-slider-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="792090196_122242424906094148_7180084991833895957_n.jpg" alt="Barangay Santa Ines Community View" class="transition-image">
+      <div class="transition-overlay">
+        <span>Community First</span>
+        <p>Serving the Residents of Barangay Santa Ines with Integrity & Excellence</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="486056483_122182872782094148_9068234886463344285_n.jpg" alt="Barangay Hall Administrative Center" class="transition-image">
+      <div class="transition-overlay">
+        <span>Digital Governance</span>
+        <p>Streamlined Online Services & Fast Document Processing</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="515684071_122198055860094148_5308533843496873062_n.jpg" alt="Community Infrastructure & Projects" class="transition-image">
+      <div class="transition-overlay">
+        <span>Active Development</span>
+        <p>Building Safer Roads, Modern Infrastructure & Inclusive Programs</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Main Content Layout -->
+  <main class="main-container">
+    
+    <!-- Left Column (Primary Directory & Listings) -->
+    <section>
+      
+      <!-- Online Barangay Services Grid -->
+      <div class="section-title" id="services">
+        <span>Featured Barangay Services & Document Applications</span>
+      </div>
+
+      <div class="cards-grid" id="servicesGrid">
+        
+        <!-- Card 1 -->
+        <div class="sf-card" data-title="Barangay Clearance">
+          <span class="badge-choice">Most Requested</span>
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">📄</div>
+              <div>
+                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Barangay Clearance')">Barangay Clearance</a>
+                <div class="card-rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(4.9 / 5.0 - 1,280 Processed)</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">Official document required for employment, postal ID, bank transactions, and legal identification verification.</p>
+          </div>
+          <div>
+            <div class="card-meta">
+              <span>Processing: <strong>1 Business Day</strong></span>
+              <span>Fee: <strong>₱50.00</strong></span>
+            </div>
+            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Barangay Clearance')">Apply Online</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="sf-card" data-title="Certificate of Indigency">
+          <span class="badge-choice">Free Service</span>
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">🏥</div>
+              <div>
+                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Certificate of Indigency')">Certificate of Indigency</a>
+                <div class="card-rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(5.0 / 5.0 - 940 Processed)</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">Issued for medical assistance, educational scholarship, financial aid, and DSWD program enrollment.</p>
+          </div>
+          <div>
+            <div class="card-meta">
+              <span>Processing: <strong>Same Day</strong></span>
+              <span>Fee: <strong>FREE</strong></span>
+            </div>
+            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Certificate of Indigency')">Apply Online</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="sf-card" data-title="Business Permit Clearance">
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">🏪</div>
+              <div>
+                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Business Permit Clearance')">Business Permit Clearance</a>
+                <div class="card-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(4.8 / 5.0 - 310 Processed)</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">Required endorsement for sari-sari stores, commercial establishments, and micro-enterprises operating within Sta. Ines.</p>
+          </div>
+          <div>
+            <div class="card-meta">
+              <span>Processing: <strong>2 Business Days</strong></span>
+              <span>Fee: <strong>₱150.00</strong></span>
+            </div>
+            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Business Permit Clearance')">Apply Online</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="sf-card" data-title="Certificate of Residency">
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">🏠</div>
+              <div>
+                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Certificate of Residency')">Certificate of Residency</a>
+                <div class="card-rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(4.9 / 5.0 - 850 Processed)</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">Official proof of bonafide residency within Barangay Santa Ines for voter registration, utility connection, and school requirements.</p>
+          </div>
+          <div>
+            <div class="card-meta">
+              <span>Processing: <strong>1 Business Day</strong></span>
+              <span>Fee: <strong>₱50.00</strong></span>
+            </div>
+            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Certificate of Residency')">Apply Online</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Infrastructure Projects & Community Corner -->
+      <div class="section-title" id="projects">
+        <span>Community Development & Infrastructure Projects</span>
+      </div>
+
+      <div class="cards-grid">
+        <div class="sf-card">
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">💡</div>
+              <div>
+                <div class="card-title" style="color:var(--sf-text-main);">Solar Streetlight Expansion Phase III</div>
+                <div class="card-rating"><span style="color:var(--sf-green); font-weight:700;">● In Progress (85%)</span></div>
+              </div>
+            </div>
+            <p class="card-description">Installation of 60 smart LED solar-powered streetlights along Purok 3 to Purok 5 provincial roads.</p>
+          </div>
+          <div class="card-meta">
+            <span>Target Completion: <strong>Oct 2026</strong></span>
+            <span>Budget: <strong>₱450,000</strong></span>
+          </div>
+        </div>
+
+        <div class="sf-card">
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">🧱</div>
+              <div>
+                <div class="card-title" style="color:var(--sf-text-main);">Drainage System & Flood Control Dredging</div>
+                <div class="card-rating"><span style="color:var(--sf-blue); font-weight:700;">● Scheduled</span></div>
+              </div>
+            </div>
+            <p class="card-description">Desilting of main arterial drainage canals ahead of monsoon season to protect residential areas.</p>
+          </div>
+          <div class="card-meta">
+            <span>Target Completion: <strong>Nov 2026</strong></span>
+            <span>Budget: <strong>₱320,000</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barangay Ordinances Categories Directory -->
+<div class="section-title" id="ordinances">
+  <span>Barangay Ordinances & Legislative Records</span>
+</div>
+
+<div class="categories-grid">
+  <a href="environmental-protection.html" class="cat-item">
+    <span>Environmental Protection</span>
+    <span class="cat-count">14</span>
+  </a>
+  <a href="peace-order-curfew.html" class="cat-item">
+    <span>Peace, Order & Curfew</span>
+    <span class="cat-count">22</span>
+  </a>
+  <a href="business-vendor-code.html" class="cat-item">
+    <span>Business & Vendor Code</span>
+    <span class="cat-count">09</span>
+  </a>
+  <a href="health-sanitation.html" class="cat-item">
+    <span>Health & Sanitation</span>
+    <span class="cat-count">18</span>
+  </a>
+  <a href="youth-sports-development.html" class="cat-item">
+    <span>Youth & Sports Development</span>
+    <span class="cat-count">11</span>
+  </a>
+  <a href="disaster-risk-management.html" class="cat-item">
+    <span>Disaster Risk Management</span>
+    <span class="cat-count">07</span>
+  </a>
+</div>
+
+    </section>
+
+    <!-- Right Sidebar (Barangay Information & Emergency Directory) -->
+    <aside>
+      
+      <!-- Barangay Officials List Widget -->
+      <div class="sidebar-widget" id="directory">
+        <div class="widget-title">Barangay Council</div>
+        
+        <div class="official-item">
+          <div class="official-avatar" style="background:#ff6600; color:#fff;">PB</div>
+          <div class="official-info">
+            <h5>Hon. Melgazar C. Balancio Jr.</h5>
+            <p>Punong Barangay (Captain)</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K1</div>
+          <div class="official-info">
+            <h5>Hon. Yolanda F. Antolin</h5>
+            <p>Kagawad - Health & Sanitation</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K2</div>
+          <div class="official-info">
+            <h5>Hon. Jayvee C. Sevillaga</h5>
+            <p>Kagawad - Peace & Order</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K3</div>
+          <div class="official-info">
+            <h5>Hon. Jing Cabanero</h5>
+            <p>Kagawad - Infrastructure</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K4</div>
+          <div class="official-info">
+            <h5>Hon. Marnelyn Calpito</h5>
+            <p>Kagawad - Infrastructure</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K5</div>
+          <div class="official-info">
+            <h5>Hon. Alvin C. Abuan</h5>
+            <p>Kagawad - Infrastructure</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K6</div>
+          <div class="official-info">
+            <h5>Hon. Elner Calpito</h5>
+            <p>Kagawad - Infrastructure</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">K7</div>
+          <div class="official-info">
+            <h5>Hon. Jonathan Calpito</h5>
+            <p>Kagawad - Infrastructure</p>
+          </div>
+        </div>
+
+        <div class="official-item">
+          <div class="official-avatar">SK</div>
+          <div class="official-info">
+            <h5>Hon. Paulo C. Rabanal Jr.</h5>
+            <p>SK Chairperson</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Desk Hotline Widget -->
+      <div class="sidebar-widget">
+        <div class="widget-title">Emergency Contact Desk</div>
+        <div style="font-size:13px; line-height:1.6; color:#334155;">
+                    <p style="margin-bottom:8px;"><strong>🚨 Punong Barangay Hotline:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+          <p style="margin-bottom:8px;"><strong>🚨 Barangay Tanod Hotline:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+          <p style="margin-bottom:8px;"><strong>🚑 Sta. Ines Health Center:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+          <p style="margin-bottom:8px;"><strong>🚒 Paniqui Fire Station:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+          <p><strong>👮 PNP Paniqui:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+        </div>
+        <button class="btn btn-orange" style="width:100%; margin-top:14px; justify-content:center;" onclick="openBlotterModal()">File Online Incident Report</button>
+      </div>
+
+      <!-- Quick Document Verification Box -->
+      <div class="sidebar-widget">
+        <div class="widget-title">Quick Status Lookup</div>
+        <p style="font-size:12px; color:var(--sf-text-muted); margin-bottom:10px;">Enter your Request or Ticket Reference ID to check real-time status.</p>
+        <input type="text" id="quickTrackInput" class="form-control" placeholder="e.g., BSI-2026-8921" style="margin-bottom:10px;">
+        <button class="btn btn-outline" style="width:100%; justify-content:center; background:#12161a; color:#fff;" onclick="quickTrackLookup()">Verify Request</button>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Application / Clearance Request Modal -->
+  <div class="modal-overlay" id="clearanceModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title" id="clearanceModalTitle">File Document Application</div>
+        <button class="modal-close" onclick="closeModal('clearanceModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="clearanceForm" onsubmit="handleClearanceSubmit(event)">
+          <input type="hidden" id="appType" value="Barangay Clearance">
+          
+          <div class="form-group">
+            <label>Full Name (First, Middle, Last)</label>
+            <input type="text" id="appFullName" class="form-control" placeholder="e.g. Juan dela Cruz" required>
+          </div>
+
+          <div class="form-group">
+            <label>Complete Purok / Street Address</label>
+            <input type="text" id="appAddress" class="form-control" placeholder="e.g. Purok 2, Main Street" required>
+          </div>
+
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" id="appPhone" class="form-control" placeholder="e.g. 09171234567" required>
+          </div>
+
+          <div class="form-group">
+            <label>Purpose of Request</label>
+            <select id="appPurpose" class="form-control" required>
+              <option value="Employment Requirement">Local / Overseas Employment</option>
+              <option value="Postal / Government ID Application">ID Application (Postal, Passport, etc.)</option>
+              <option value="Bank Account Opening">Bank Account Opening</option>
+              <option value="School / Scholarship Requirement">School / Scholarship</option>
+              <option value="Business Operation Permit">Business Operation</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-orange" style="width:100%; justify-content:center; padding:12px; margin-top:10px;">Submit Online Application</button>
+        </form>
+
+        <div id="clearanceResult" class="output-box" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incident Report / Blotter Modal -->
+  <div class="modal-overlay" id="blotterModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">File Barangay Incident / Blotter Report</div>
+        <button class="modal-close" onclick="closeModal('blotterModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="blotterForm" onsubmit="handleBlotterSubmit(event)">
+          <div class="form-group">
+            <label>Complainant Name (Optional / Confidential)</label>
+            <input type="text" id="blotterName" class="form-control" placeholder="Leave blank for confidential reporting">
+          </div>
+
+          <div class="form-group">
+            <label>Incident Type</label>
+            <select id="blotterType" class="form-control" required>
+              <option value="Noise Disturbance / Nuisance">Noise Disturbance / Nuisance</option>
+              <option value="Property Dispute / Boundary">Property Dispute</option>
+              <option value="Public Safety / Barangay Tanod Concern">Public Safety Concern</option>
+              <option value="Waste Disposal / Environmental Issue">Waste / Sanitation Concern</option>
+              <option value="Other Community Dispute">Other Concern</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Incident Location (Purok / Landmark)</label>
+            <input type="text" id="blotterLocation" class="form-control" placeholder="e.g., Near Purok 4 Basketball Court" required>
+          </div>
+
+          <div class="form-group">
+            <label>Detailed Incident Description</label>
+            <textarea id="blotterDetails" class="form-control" rows="4" placeholder="Describe what happened, dates, and parties involved..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-orange" style="width:100%; justify-content:center; padding:12px;">Submit Incident Ticket</button>
+        </form>
+
+        <div id="blotterResult" class="output-box" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Track Request Status Modal -->
+  <div class="modal-overlay" id="trackModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">Track Document / Ticket Status</div>
+        <button class="modal-close" onclick="closeModal('trackModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Reference Number</label>
+          <input type="text" id="trackInput" class="form-control" placeholder="e.g., BSI-2026-9812">
+        </div>
+        <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="performTracking()">Search Database</button>
+
+        <div id="trackResult" class="output-box" style="display:none; margin-top:16px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Bar -->
+  <div class="toast" id="toast"></div>
+
+  <!-- SourceForge Dark Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Barangay Santa Ines</h4>
+        <ul>
+          <li>Multi-Purpose Hall</li>
+          <li>Paniqui, Tarlac 2307</li>
+          <li>Philippines</li>
+          <li>Hours: Mon - Fri (8:00 AM - 5:00 PM)</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>e-Services</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openClearanceModal('Barangay Clearance')">Barangay Clearance</a></li>
+          <li><a href="javascript:void(0)" onclick="openClearanceModal('Certificate of Indigency')">Certificate of Indigency</a></li>
+          <li><a href="javascript:void(0)" onclick="openClearanceModal('Business Permit Clearance')">Business Permit Endorsement</a></li>
+          <li><a href="javascript:void(0)" onclick="openClearanceModal('Certificate of Residency')">Residency Certification</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Public Records</h4>
+        <ul>
+          <li><a href="#ordinances">Barangay Ordinances</a></li>
+          <li><a href="#projects">Infrastructure Transparency</a></li>
+          <li><a href="#directory">Barangay Council Roster</a></li>
+          <li><a href="javascript:void(0)" onclick="openBlotterModal()">Blotter Desk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Emergency Hotline</h4>
+        <ul>
+          <li style="color:#ffffff; font-weight:700;">Barangay Tanod: (045) 931-0199</li>
+          <li>LGU Paniqui: (045) 931-0222</li>
+          <li>National Emergency: 911</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Barangay Santa Ines, Municipality of Paniqui, Province of Tarlac. All Rights Reserved.</div>
+      <div style="display:flex; gap:16px;">
+        <a href="#" style="color:#94a3b8; text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="color:#94a3b8; text-decoration:none;">Terms of Public Use</a>
+        <a href="#" style="color:#94a3b8; text-decoration:none;">Freedom of Information</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic JavaScript -->
+  <script>
+    // LocalStorage State Management
+    const STORAGE_KEY = 'BSINes_Portal_Data';
+
+    function getStorageData() {
+      const data = localStorage.getItem(STORAGE_KEY);
+      return data ? JSON.parse(data) : { requests: [], blotters: [] };
+    }
+
+    function saveStorageData(data) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+
+    // Modal Control Functions
+    function openClearanceModal(type) {
+      document.getElementById('clearanceModalTitle').innerText = 'File Application: ' + type;
+      document.getElementById('appType').value = type;
+      document.getElementById('clearanceResult').style.display = 'none';
+      document.getElementById('clearanceForm').reset();
+      document.getElementById('clearanceModal').classList.add('active');
+    }
+
+    function openBlotterModal() {
+      document.getElementById('blotterResult').style.display = 'none';
+      document.getElementById('blotterForm').reset();
+      document.getElementById('blotterModal').classList.add('active');
+    }
+
+    function openTrackModal() {
+      document.getElementById('trackResult').style.display = 'none';
+      document.getElementById('trackModal').classList.add('active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    // Toast Notification System
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3000);
+    }
+
+    // Submit Clearance Request
+    function handleClearanceSubmit(e) {
+      e.preventDefault();
+      const refId = 'BSI-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+      
+      const record = {
+        refId: refId,
+        type: document.getElementById('appType').value,
+        name: document.getElementById('appFullName').value,
+        address: document.getElementById('appAddress').value,
+        phone: document.getElementById('appPhone').value,
+        purpose: document.getElementById('appPurpose').value,
+        status: 'Pending Verification',
+        dateSubmitted: new Date().toLocaleDateString()
+      };
+
+      const db = getStorageData();
+      db.requests.push(record);
+      saveStorageData(db);
+
+      // UI Feedback
+      document.getElementById('clearanceForm').reset();
+      const resultBox = document.getElementById('clearanceResult');
+      resultBox.style.display = 'block';
+      resultBox.innerHTML = `
+        <strong style="color:var(--sf-green);">✓ Application Submitted Successfully!</strong><br>
+        <p style="margin-top:6px;">Your Tracking Reference ID is: <strong style="font-size:16px; color:var(--sf-orange);">${refId}</strong></p>
+        <p style="font-size:11px; color:#64748b; margin-top:4px;">Please present this Reference ID at the Barangay Hall window along with a valid ID upon document pickup.</p>
+      `;
+
+      showToast('Request submitted! Reference ID: ' + refId);
+      
+      // Dynamic counter increase
+      const issuedEl = document.getElementById('issuedCount');
+      if (issuedEl) {
+        issuedEl.innerText = (parseInt(issuedEl.innerText.replace(',', '')) + 1).toLocaleString();
+      }
+    }
+
+    // Submit Incident Report
+    function handleBlotterSubmit(e) {
+      e.preventDefault();
+      const ticketId = 'TKT-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+      
+      const record = {
+        refId: ticketId,
+        complainant: document.getElementById('blotterName').value || 'Anonymous Resident',
+        type: document.getElementById('blotterType').value,
+        location: document.getElementById('blotterLocation').value,
+        details: document.getElementById('blotterDetails').value,
+        status: 'Queued for Tanod Inspection',
+        dateSubmitted: new Date().toLocaleDateString()
+      };
+
+      const db = getStorageData();
+      db.blotters.push(record);
+      saveStorageData(db);
+
+      document.getElementById('blotterForm').reset();
+      const resultBox = document.getElementById('blotterResult');
+      resultBox.style.display = 'block';
+      resultBox.innerHTML = `
+        <strong style="color:var(--sf-orange);">✓ Incident Ticket Logged!</strong><br>
+        <p style="margin-top:6px;">Ticket Reference Number: <strong style="font-size:16px; color:var(--sf-dark);">${ticketId}</strong></p>
+        <p style="font-size:11px; color:#64748b; margin-top:4px;">The Duty Tanod Officer has been notified for appropriate barangay action.</p>
+      `;
+
+      showToast('Incident report logged! Ticket ID: ' + ticketId);
+    }
+
+    // Tracking Lookup Logic
+    function performTracking() {
+      const query = document.getElementById('trackInput').value.trim();
+      const resultBox = document.getElementById('trackResult');
+      
+      if (!query) {
+        showToast('Please enter a valid reference ID.');
+        return;
+      }
+
+      const db = getStorageData();
+      const reqMatch = db.requests.find(r => r.refId.toLowerCase() === query.toLowerCase());
+      const blotterMatch = db.blotters.find(b => b.refId.toLowerCase() === query.toLowerCase());
+
+      resultBox.style.display = 'block';
+
+      if (reqMatch) {
+        resultBox.innerHTML = `
+          <strong style="color:var(--sf-blue);">Document Application Record Found</strong><br>
+          <div style="margin-top:8px; font-size:12px;">
+            <p><strong>Type:</strong> ${reqMatch.type}</p>
+            <p><strong>Applicant:</strong> ${reqMatch.name}</p>
+            <p><strong>Date Filed:</strong> ${reqMatch.dateSubmitted}</p>
+            <p><strong>Status:</strong> <span style="background:#ff6600; color:#fff; padding:2px 6px; border-radius:3px; font-weight:700;">${reqMatch.status}</span></p>
+          </div>
+        `;
+      } else if (blotterMatch) {
+        resultBox.innerHTML = `
+          <strong style="color:var(--sf-orange);">Incident Report Record Found</strong><br>
+          <div style="margin-top:8px; font-size:12px;">
+            <p><strong>Category:</strong> ${blotterMatch.type}</p>
+            <p><strong>Location:</strong> ${blotterMatch.location}</p>
+            <p><strong>Date Filed:</strong> ${blotterMatch.dateSubmitted}</p>
+            <p><strong>Status:</strong> <span style="background:#222; color:#fff; padding:2px 6px; border-radius:3px; font-weight:700;">${blotterMatch.status}</span></p>
+          </div>
+        `;
+      } else {
+        resultBox.innerHTML = `
+          <strong style="color:#e11d48;">No matching record found</strong>
+          <p style="font-size:12px; color:#64748b; margin-top:4px;">Please verify your Reference ID (e.g. BSI-2026-XXXX or TKT-2026-XXXX) or visit the Barangay Hall window.</p>
+        `;
+      }
+    }
+
+    function quickTrackLookup() {
+      const val = document.getElementById('quickTrackInput').value.trim();
+      if (!val) {
+        showToast('Please enter a tracking ID.');
+        return;
+      }
+      openTrackModal();
+      document.getElementById('trackInput').value = val;
+      performTracking();
+    }
+
+    // Filter Services on Hero Search
+    function filterServices() {
+      const term = document.getElementById('globalSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('#servicesGrid .sf-card');
+
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const desc = card.textContent.toLowerCase();
+        if (title.includes(term) || desc.includes(term)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    // Automatic Image Slider Rotation Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.transition-slider-container .slide');
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+  const slideDuration = 4500; // Time in milliseconds before changing slides (4.5s)
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, slideDuration);
+});
+  </script>
+</body>
+</html>
