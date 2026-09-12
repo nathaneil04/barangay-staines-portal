@@ -6,6 +6,7 @@
   <title>Barangay Santa Ines - Official Digital Government Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="search.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -1594,21 +1595,7 @@ footer {
       performTracking();
     }
 
-    // Filter Services on Hero Search
-    function filterServices() {
-      const term = document.getElementById('globalSearch').value.toLowerCase();
-      const cards = document.querySelectorAll('#servicesGrid .sf-card');
-
-      cards.forEach(card => {
-        const title = card.getAttribute('data-title').toLowerCase();
-        const desc = card.textContent.toLowerCase();
-        if (title.includes(term) || desc.includes(term)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
+    
     // Automatic Image Slider Rotation Logic
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.transition-slider-container .slide');
@@ -1623,6 +1610,24 @@ document.addEventListener('DOMContentLoaded', () => {
     slides[currentSlide].classList.add('active');
   }, slideDuration);
 });
+
   </script>
+  <!-- Search Results Modal -->
+<div class="modal-overlay search-results-modal" id="searchResultsModal">
+  <div class="modal-window search-results-window">
+    <div class="modal-header search-results-header">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="modal-title">Search Results</div>
+        <span class="search-results-badge" id="searchQueryBadge">0 Found</span>
+      </div>
+      <button class="modal-close" onclick="closeSearchModal()">&times;</button>
+    </div>
+    <div class="modal-body search-results-body">
+      <div id="searchResultsContainer"></div>
+    </div>
+  </div>
+</div>
+<script src="search.js"></script>
+
 </body>
 </html>
