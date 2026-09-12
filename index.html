@@ -866,6 +866,174 @@ footer {
     max-width: none;
   }
 }
+/* ==========================================
+BARANGAY PHOTO SLIDING GALLERY
+========================================== */
+
+.gallery-slider {
+position: relative;
+width: 100%;
+margin-bottom: 32px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.gallery-track-container {
+width: 100%;
+overflow: hidden;
+border-radius: 8px;
+}
+
+.barangay-gallery {
+display: flex;
+gap: 16px;
+transition: transform 0.6s ease-in-out;
+will-change: transform;
+}
+
+.gallery-card {
+position: relative;
+flex: 0 0 calc((100% - 32px) / 3);
+height: 280px;
+border-radius: 8px;
+overflow: hidden;
+background: #ffffff;
+border: 1px solid var(--sf-card-border);
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.gallery-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+transform: scale(1.06);
+}
+
+.gallery-overlay {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 50px 16px 16px;
+color: #ffffff;
+background: linear-gradient(
+180deg,
+transparent 0%,
+rgba(18,22,26,0.25) 25%,
+rgba(18,22,26,0.95) 100%
+);
+}
+
+.gallery-overlay span {
+display: block;
+font-size: 15px;
+font-weight: 800;
+margin-bottom: 5px;
+}
+
+.gallery-overlay p {
+font-size: 11px;
+color: #dbe3ec;
+line-height: 1.5;
+}
+
+/* Navigation Arrows */
+.gallery-arrow {
+flex: 0 0 42px;
+width: 42px;
+height: 42px;
+border: none;
+border-radius: 50%;
+background: var(--sf-dark);
+color: #ffffff;
+cursor: pointer;
+font-size: 18px;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 5;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-arrow:hover {
+background: var(--sf-orange);
+transform: scale(1.08);
+}
+
+/* Gallery Dots */
+.gallery-dots {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 7px;
+margin-top: -18px;
+margin-bottom: 32px;
+}
+
+.gallery-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: #cbd5e1;
+border: none;
+cursor: pointer;
+padding: 0;
+transition: all 0.25s ease;
+}
+
+.gallery-dot.active {
+width: 22px;
+border-radius: 10px;
+background: var(--sf-orange);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+.gallery-card {
+flex: 0 0 calc((100% - 16px) / 2);
+height: 250px;
+}
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+.gallery-slider {
+gap: 6px;
+}
+
+.gallery-card {
+flex: 0 0 100%;
+height: 260px;
+}
+
+.gallery-arrow {
+flex: 0 0 36px;
+width: 36px;
+height: 36px;
+font-size: 15px;
+}
+
+.gallery-overlay {
+padding: 45px 12px 12px;
+}
+
+.gallery-overlay span {
+font-size: 13px;
+}
+
+.gallery-overlay p {
+font-size: 10px;
+}
+}
+
 </style>
 </head>
 <body>
@@ -967,6 +1135,126 @@ footer {
     
     <!-- Left Column (Primary Directory & Listings) -->
     <section>
+
+      <!-- Barangay Santa Ines Photo Gallery -->
+
+<div class="section-title" id="gallery">
+  <span>Barangay Santa Ines Featured Events Photos</span>
+</div>
+
+<div class="gallery-slider">
+
+  <button class="gallery-arrow gallery-prev" onclick="moveGallery(-1)" aria-label="Previous photo">
+    ❮
+  </button>
+
+  <div class="gallery-track-container">
+    <div class="barangay-gallery" id="barangayGallery">
+
+```
+  <!-- Community Activities -->
+  <div class="gallery-card">
+    <img src="792109356_122242425812094148_3966266776684682550_n.jpg"
+         alt="Barangay Santa Ines Community Activities"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Community Activities</span>
+      <p>Community gatherings, programs, and public service activities.</p>
+    </div>
+  </div>
+
+  <!-- Barangay Hall -->
+  <div class="gallery-card">
+    <img src="789679888_2063816620924594_1176141089592297391_n.jpg"
+         alt="Barangay Santa Ines Hall"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Barangay Hall</span>
+      <p>Barangay Santa Ines administrative and community center.</p>
+    </div>
+  </div>
+
+  <!-- Disaster Response -->
+  <div class="gallery-card">
+    <img src="657472230_122228000996094148_8046822310188159120_n.jpg"
+         alt="Barangay Santa Ines Immediate Emergency Response Activities"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Emergency Response</span>
+      <p>Emergency preparedness, response operations, and relief activities.</p>
+    </div>
+  </div>
+
+  <!-- Infrastructure Projects -->
+  <div class="gallery-card">
+    <img src="656551650_122227751294094148_946408568073443138_n.jpg"
+         alt="Barangay Santa Ines Infrastructure Projects"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Infrastructure Projects</span>
+      <p>Road, drainage, lighting, and community improvement projects.</p>
+    </div>
+  </div>
+
+  <!-- Health -->
+  <div class="gallery-card">
+    <img src="663189622_122228962124094148_6442473490748682665_n.jpg"
+         alt="Health Services"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Health Programs & Services</span>
+      <p>Prioritizing citizens to prevent health risks.</p>
+    </div>
+  </div>
+
+  <!-- Clean-up Drives -->
+  <div class="gallery-card">
+    <img src="783727632_122241364622094148_7258872288002436896_n.jpg"
+         alt="Barangay Santa Ines Clean-up Drive"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Clean-up Drives</span>
+      <p>Environmental activities and community cleanliness campaigns.</p>
+    </div>
+  </div>
+
+  <!-- Sports Events -->
+  <div class="gallery-card">
+    <img src="786930157_122256448226090885_1000437174892445400_n.jpg"
+         alt="Barangay Santa Ines Sports Events"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Sports Events</span>
+      <p>Barangay sports leagues, tournaments, and recreational activities.</p>
+    </div>
+  </div>
+
+  <!-- Youth Activities -->
+  <div class="gallery-card">
+    <img src="505080281_122210837456090885_8005276780604705660_n.jpg"
+         alt="Barangay Santa Ines Youth Activities"
+         loading="lazy">
+    <div class="gallery-overlay">
+      <span>Youth Activities</span>
+      <p>SK programs, youth development, volunteer work, and events.</p>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <button class="gallery-arrow gallery-next" onclick="moveGallery(1)" aria-label="Next photo">
+    ❯
+  </button>
+
+</div>
+
+<!-- Gallery Indicators -->
+
+<div class="gallery-dots" id="galleryDots"></div>
+
       
       <!-- Online Barangay Services Grid -->
       <div class="section-title" id="services">
@@ -1073,7 +1361,212 @@ footer {
           </div>
         </div>
 
+        <!-- Card 5 -->
+        <div class="sf-card" data-title="First Time Job Seeker Certificate">
+          <div>
+            <div class="card-header-group">
+              <div class="card-icon">💼</div>
+              <div>
+                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('First Time Job Seeker Certificate')">First Time Job Seeker Certificate</a>
+                <div class="card-rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(4.9 / 5.0 - 850 Processed)</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">Official certification confirming first-time job seeker status within Barangay Santa Ines for pre-employment application requirements and government fee exemptions.</p>
+          </div>
+          <div>
+            <div class="card-meta">
+              <span>Processing: <strong>1 Business Day</strong></span>
+              <span>Fee: <strong>Free</strong></span>
+            </div>
+            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('First Time Job Seeker Certificate')">Apply Online</button>
+          </div>
+        </div>
+
       </div>
+
+      ```
+  <!-- Barangay Achievements & Accomplishments -->
+  <div class="section-title" id="achievements">
+    <span>Barangay Achievements & Accomplishments</span>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- Achievement 1 -->
+    <div class="sf-card">
+      <div>
+        <div class="card-header-group">
+          <div class="card-icon">🏆</div>
+          <div>
+            <div class="card-title" style="color:var(--sf-text-main);">
+              Outstanding Community Service
+            </div>
+            <div class="card-rating">
+              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Successful implementation of community-focused programs that
+          strengthen public service delivery, resident participation,
+          and barangay engagement.
+        </p>
+      </div>
+
+      <div class="card-meta">
+        <span>Recognition Year: <strong>2026</strong></span>
+        <span>Status: <strong>Completed</strong></span>
+      </div>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="sf-card">
+      <div>
+        <div class="card-header-group">
+          <div class="card-icon">🌱</div>
+          <div>
+            <div class="card-title" style="color:var(--sf-text-main);">
+              Environmental & Clean Community Program
+            </div>
+            <div class="card-rating">
+              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Conducted regular clean-up activities, waste-management
+          initiatives, and environmental awareness campaigns to promote
+          a cleaner and healthier Barangay Santa Ines.
+        </p>
+      </div>
+
+      <div class="card-meta">
+        <span>Coverage: <strong>Barangay-wide</strong></span>
+        <span>Status: <strong>Completed</strong></span>
+      </div>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="sf-card">
+      <div>
+        <div class="card-header-group">
+          <div class="card-icon">💡</div>
+          <div>
+            <div class="card-title" style="color:var(--sf-text-main);">
+              Improved Community Safety & Street Lighting
+            </div>
+            <div class="card-rating">
+              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Expanded community safety initiatives and improved lighting
+          coverage in selected roads and public areas to support safer
+          movement for residents, workers, and visitors.
+        </p>
+      </div>
+
+      <div class="card-meta">
+        <span>Program: <strong>Public Safety</strong></span>
+        <span>Status: <strong>Completed</strong></span>
+      </div>
+    </div>
+
+    <!-- Achievement 4 -->
+    <div class="sf-card">
+      <div>
+        <div class="card-header-group">
+          <div class="card-icon">🤝</div>
+          <div>
+            <div class="card-title" style="color:var(--sf-text-main);">
+              Youth & Community Engagement
+            </div>
+            <div class="card-rating">
+              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Supported youth activities, sports programs, volunteer
+          initiatives, and community participation projects that encourage
+          active involvement in barangay development.
+        </p>
+      </div>
+
+      <div class="card-meta">
+        <span>Beneficiaries: <strong>Youth & Residents</strong></span>
+        <span>Status: <strong>Completed</strong></span>
+      </div>
+    </div>
+
+    <!-- Achievement 5 -->
+    <div class="sf-card">
+      <div>
+        <div class="card-header-group">
+          <div class="card-icon">🚨</div>
+          <div>
+            <div class="card-title" style="color:var(--sf-text-main);">
+              Disaster Preparedness & Response
+            </div>
+            <div class="card-rating">
+              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Strengthened disaster preparedness through community
+          coordination, emergency response activities, awareness
+          campaigns, and risk-reduction initiatives.
+        </p>
+      </div>
+
+      <div class="card-meta">
+        <span>Focus: <strong>Disaster Risk Reduction</strong></span>
+        <span>Status: <strong>Completed</strong></span>
+      </div>
+    </div>
+
+    <!-- Achievement 6 -->
+    <div class="sf-card">
+      <div>
+        <div class="card-header-group">
+          <div class="card-icon">💻</div>
+          <div>
+            <div class="card-title" style="color:var(--sf-text-main);">
+              Digital Barangay Service Improvement
+            </div>
+            <div class="card-rating">
+              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-description">
+          Improved access to barangay information and online services
+          through digital systems for document requests, public
+          information, and community communication.
+        </p>
+      </div>
+
+      <div class="card-meta">
+        <span>Program: <strong>e-Governance</strong></span>
+        <span>Status: <strong>Completed</strong></span>
+
+      </div>
+    </div>
+
+  </div>
+
+  
 
       <!-- Infrastructure Projects & Community Corner -->
       <div class="section-title" id="projects">
@@ -1115,7 +1608,49 @@ footer {
           </div>
         </div>
       </div>
+      
+      <!-- Barangay Events & Community Calendar -->
+<div class="section-title" id="events">
+  <span>Barangay Events & Community Calendar</span>
+</div>
 
+<div class="cards-grid">
+
+  <div class="sf-card">
+    <div>
+      <div class="card-header-group">
+        <div class="card-icon">📅</div>
+        <div>
+          <div class="card-title" style="color:var(--sf-text-main);">
+            Barangay General Assembly
+          </div>
+          <div class="card-rating">
+            <span style="color:var(--sf-green); font-weight:700;">
+              ● Upcoming
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <p class="card-description">
+        Community assembly for residents to receive updates, discuss
+        barangay programs, and raise community concerns.
+      </p>
+    </div>
+
+    <div class="card-meta">
+      <span>Date: <strong>September 28, 2026</strong></span>
+      <span>Time: <strong>2:00 PM</strong></span>
+    </div>
+
+    <button class="btn btn-orange"
+      style="width:100%; justify-content:center;"
+      onclick="showToast('Event registration feature coming soon.')">
+      View Event
+    </button>
+  </div>
+
+</div>
       <!-- Barangay Ordinances Categories Directory -->
 <div class="section-title" id="ordinances">
   <span>Barangay Ordinances & Legislative Records</span>
@@ -1595,6 +2130,141 @@ footer {
       performTracking();
     }
 
+    /* ==========================================
+BARANGAY PHOTO GALLERY SLIDER
+========================================== */
+
+let galleryIndex = 0;
+let galleryTimer;
+
+function getGalleryVisibleCount() {
+if (window.innerWidth <= 600) {
+return 1;
+}
+
+if (window.innerWidth <= 900) {
+return 2;
+}
+
+return 3;
+}
+
+function getGalleryCardWidth() {
+const gallery = document.getElementById('barangayGallery');
+
+if (!gallery) return 0;
+
+const card = gallery.querySelector('.gallery-card');
+
+if (!card) return 0;
+
+const cardWidth = card.offsetWidth;
+const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+
+return cardWidth + gap;
+}
+
+function updateGallery() {
+const gallery = document.getElementById('barangayGallery');
+const dotsContainer = document.getElementById('galleryDots');
+
+if (!gallery || !dotsContainer) return;
+
+const cards = gallery.querySelectorAll('.gallery-card');
+const visibleCount = getGalleryVisibleCount();
+
+const maxIndex = Math.max(
+0,
+cards.length - visibleCount
+);
+
+if (galleryIndex > maxIndex) {
+galleryIndex = 0;
+}
+
+const cardWidth = getGalleryCardWidth();
+
+gallery.style.transform =
+`translateX(-${galleryIndex * cardWidth}px)`;
+
+dotsContainer.innerHTML = '';
+
+for (let i = 0; i <= maxIndex; i++) {
+
+
+const dot = document.createElement('button');
+
+dot.className =
+  'gallery-dot' +
+  (i === galleryIndex ? ' active' : '');
+
+dot.setAttribute(
+  'aria-label',
+  `Go to gallery slide ${i + 1}`
+);
+
+dot.onclick = function () {
+  galleryIndex = i;
+  updateGallery();
+  restartGalleryAutoSlide();
+};
+
+dotsContainer.appendChild(dot);
+
+}
+}
+
+function moveGallery(direction) {
+const gallery = document.getElementById('barangayGallery');
+
+if (!gallery) return;
+
+const cards = gallery.querySelectorAll('.gallery-card');
+const visibleCount = getGalleryVisibleCount();
+
+const maxIndex = Math.max(
+0,
+cards.length - visibleCount
+);
+
+galleryIndex += direction;
+
+if (galleryIndex > maxIndex) {
+galleryIndex = 0;
+}
+
+if (galleryIndex < 0) {
+galleryIndex = maxIndex;
+}
+
+updateGallery();
+restartGalleryAutoSlide();
+}
+
+function startGalleryAutoSlide() {
+
+clearInterval(galleryTimer);
+
+galleryTimer = setInterval(function () {
+moveGallery(1);
+}, 4000);
+}
+
+function restartGalleryAutoSlide() {
+
+clearInterval(galleryTimer);
+
+startGalleryAutoSlide();
+}
+
+window.addEventListener('resize', function () {
+updateGallery();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+updateGallery();
+startGalleryAutoSlide();
+});
     
     // Automatic Image Slider Rotation Logic
 document.addEventListener('DOMContentLoaded', () => {
@@ -1611,7 +2281,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }, slideDuration);
 });
 
+
   </script>
+  
   <!-- Search Results Modal -->
 <div class="modal-overlay search-results-modal" id="searchResultsModal">
   <div class="modal-window search-results-window">
