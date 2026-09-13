@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barangay Santa Ines - Official Digital Government Portal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="search.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Barangay Santa Ines - Official Digital Government Portal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="search.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
   --sf-orange: #ff6600;
   --sf-orange-hover: #e55b00;
@@ -1037,1269 +1038,2217 @@ font-size: 10px;
 </style>
 </head>
 <body>
-
-  <!-- Top Navigation Header -->
-  <header class="top-nav">
-    <a href="#" class="brand-container">
-      <img src="brgyLOGO.png" alt="Santa Ines Logo" class="brand-logo">
-      <div class="brand-text">
-        <span class="brand-title">SANTA <span>INES</span></span>
-        <span class="brand-subtitle">e-Barangay Services</span>
-      </div>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#services">Barangay Services</a></li>
-      <li><a href="government-benefits.html">Government Benefits</a></li>
-      <li><a href="#projects">Community Projects</a></li>
-      <li><a href="#directory">Directory</a></li>
-      <li><a href="#ordinances">Ordinances</a></li>
-      <li><a href="javascript:void(0)" onclick="openBlotterModal()">Report Concern</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <button class="btn btn-outline" onclick="openTrackModal()">Track Status</button>
-      <button class="btn btn-orange" onclick="openClearanceModal('General Barangay Clearance')">File Application</button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-container">
-      <h1>The Complete Barangay E-Governance Portal</h1>
-      <p>Request official barangay clearances, verify resident records, track community infrastructure projects, and access public records in real-time.</p>
-      <strong><p>Working Hours : Mon - Fri (8:00 AM - 5:00 PM) </p></strong>
-      <!-- Global Search Box -->
-      <div class="search-box">
-        <input type="text" id="globalSearch" placeholder="Search for clearances, permits, ordinances, or barangay services..." onkeyup="filterServices()">
-        <button onclick="filterServices()">Search Portal</button>
-      </div>
-
-      <!-- Live Metric Counter Banner -->
-      <div class="stats-bar">
-        <div class="stat-item">
-          <div class="stat-number">14,820</div>
-          <div class="stat-label">Registered Residents</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" id="issuedCount">3,492</div>
-          <div class="stat-label">Certificates Issued</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Digital Resolution</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label">Emergency Desk</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Top Navigation Header -->
+<header class="top-nav">
+<a class="brand-container" href="#">
+<img alt="Santa Ines Logo" class="brand-logo" src="brgyLOGO.png"/>
+<div class="brand-text">
+<span class="brand-title">SANTA <span>INES</span></span>
+<span class="brand-subtitle">e-Barangay Services</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="#services">Barangay Services</a></li>
+<li><a href="government-benefits.html">Government Benefits</a></li>
+<li><a href="#projects">Community Projects</a></li>
+<li><a href="#directory">Directory</a></li>
+<li><a href="#ordinances">Ordinances</a></li>
+<li><a href="javascript:void(0)" onclick="openBlotterModal()">Report Concern</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn btn-outline" onclick="openTrackModal()">Track Status</button>
+<button class="btn btn-orange" onclick="openClearanceModal('General Barangay Clearance')">File Application</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-container">
+<h1>The Complete Barangay E-Governance Portal</h1>
+<p>Request official barangay clearances, verify resident records, track community infrastructure projects, and access public records in real-time.</p>
+<strong><p>Working Hours : Mon - Fri (8:00 AM - 5:00 PM) </p></strong>
+<!-- Global Search Box -->
+<div class="search-box">
+<input id="globalSearch" onkeyup="filterServices()" placeholder="Search for clearances, permits, ordinances, or barangay services..." type="text"/>
+<button onclick="filterServices()">Search Portal</button>
+</div>
+<!-- Live Metric Counter Banner -->
+<div class="stats-bar">
+<div class="stat-item">
+<div class="stat-number">14,820</div>
+<div class="stat-label">Registered Residents</div>
+</div>
+<div class="stat-item">
+<div class="stat-number" id="issuedCount">3,492</div>
+<div class="stat-label">Certificates Issued</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">100%</div>
+<div class="stat-label">Digital Resolution</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Emergency Desk</div>
+</div>
+</div>
+</div>
+</section>
 <!-- Multi-Image Cycling Transition Section -->
 <section class="transition-section">
-  <div class="transition-slider-container">
-    
-    <!-- Slide 1 -->
-    <div class="slide active">
-      <img src="792090196_122242424906094148_7180084991833895957_n.jpg" alt="Barangay Santa Ines Community View" class="transition-image">
-      <div class="transition-overlay">
-        <span>Community First</span>
-        <p>Serving the Residents of Barangay Santa Ines with Integrity & Excellence</p>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="slide">
-      <img src="486056483_122182872782094148_9068234886463344285_n.jpg" alt="Barangay Hall Administrative Center" class="transition-image">
-      <div class="transition-overlay">
-        <span>Digital Governance</span>
-        <p>Streamlined Online Services & Fast Document Processing</p>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slide">
-      <img src="515684071_122198055860094148_5308533843496873062_n.jpg" alt="Community Infrastructure & Projects" class="transition-image">
-      <div class="transition-overlay">
-        <span>Active Development</span>
-        <p>Building Safer Roads, Modern Infrastructure & Inclusive Programs</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Main Content Layout -->
-  <main class="main-container">
-    
-    <!-- Left Column (Primary Directory & Listings) -->
-    <section>
-
-      <!-- Barangay Santa Ines Photo Gallery -->
-
-<div class="section-title" id="gallery">
-  <span>Barangay Santa Ines Featured Events Photos</span>
+<div class="transition-slider-container">
+<!-- Slide 1 -->
+<div class="slide active">
+<img alt="Barangay Santa Ines Community View" class="transition-image" src="792090196_122242424906094148_7180084991833895957_n.jpg"/>
+<div class="transition-overlay">
+<span>Community First</span>
+<p>Serving the Residents of Barangay Santa Ines with Integrity &amp; Excellence</p>
 </div>
-
+</div>
+<!-- Slide 2 -->
+<div class="slide">
+<img alt="Barangay Hall Administrative Center" class="transition-image" src="486056483_122182872782094148_9068234886463344285_n.jpg"/>
+<div class="transition-overlay">
+<span>Digital Governance</span>
+<p>Streamlined Online Services &amp; Fast Document Processing</p>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="slide">
+<img alt="Community Infrastructure &amp; Projects" class="transition-image" src="515684071_122198055860094148_5308533843496873062_n.jpg"/>
+<div class="transition-overlay">
+<span>Active Development</span>
+<p>Building Safer Roads, Modern Infrastructure &amp; Inclusive Programs</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Layout -->
+<main class="main-container">
+<!-- Left Column (Primary Directory & Listings) -->
+<section>
+<!-- Barangay Santa Ines Photo Gallery -->
+<div class="section-title" id="gallery">
+<span>Barangay Santa Ines Featured Events Photos</span>
+</div>
 <div class="gallery-slider">
-
-  <button class="gallery-arrow gallery-prev" onclick="moveGallery(-1)" aria-label="Previous photo">
+<button aria-label="Previous photo" class="gallery-arrow gallery-prev" onclick="moveGallery(-1)">
     ❮
   </button>
-
-  <div class="gallery-track-container">
-    <div class="barangay-gallery" id="barangayGallery">
+<div class="gallery-track-container">
+<div class="barangay-gallery" id="barangayGallery">
 
 ```
   <!-- Community Activities -->
-  <div class="gallery-card">
-    <img src="792109356_122242425812094148_3966266776684682550_n.jpg"
-         alt="Barangay Santa Ines Community Activities"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Community Activities</span>
-      <p>Community gatherings, programs, and public service activities.</p>
-    </div>
-  </div>
-
-  <!-- Barangay Hall -->
-  <div class="gallery-card">
-    <img src="789679888_2063816620924594_1176141089592297391_n.jpg"
-         alt="Barangay Santa Ines Hall"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Barangay Hall</span>
-      <p>Barangay Santa Ines administrative and community center.</p>
-    </div>
-  </div>
-
-  <!-- Disaster Response -->
-  <div class="gallery-card">
-    <img src="657472230_122228000996094148_8046822310188159120_n.jpg"
-         alt="Barangay Santa Ines Immediate Emergency Response Activities"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Emergency Response</span>
-      <p>Emergency preparedness, response operations, and relief activities.</p>
-    </div>
-  </div>
-
-  <!-- Infrastructure Projects -->
-  <div class="gallery-card">
-    <img src="656551650_122227751294094148_946408568073443138_n.jpg"
-         alt="Barangay Santa Ines Infrastructure Projects"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Infrastructure Projects</span>
-      <p>Road, drainage, lighting, and community improvement projects.</p>
-    </div>
-  </div>
-
-  <!-- Health -->
-  <div class="gallery-card">
-    <img src="663189622_122228962124094148_6442473490748682665_n.jpg"
-         alt="Health Services"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Health Programs & Services</span>
-      <p>Prioritizing citizens to prevent health risks.</p>
-    </div>
-  </div>
-
-  <!-- Clean-up Drives -->
-  <div class="gallery-card">
-    <img src="783727632_122241364622094148_7258872288002436896_n.jpg"
-         alt="Barangay Santa Ines Clean-up Drive"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Clean-up Drives</span>
-      <p>Environmental activities and community cleanliness campaigns.</p>
-    </div>
-  </div>
-
-  <!-- Sports Events -->
-  <div class="gallery-card">
-    <img src="786930157_122256448226090885_1000437174892445400_n.jpg"
-         alt="Barangay Santa Ines Sports Events"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Sports Events</span>
-      <p>Barangay sports leagues, tournaments, and recreational activities.</p>
-    </div>
-  </div>
-
-  <!-- Youth Activities -->
-  <div class="gallery-card">
-    <img src="505080281_122210837456090885_8005276780604705660_n.jpg"
-         alt="Barangay Santa Ines Youth Activities"
-         loading="lazy">
-    <div class="gallery-overlay">
-      <span>Youth Activities</span>
-      <p>SK programs, youth development, volunteer work, and events.</p>
-    </div>
-  </div>
-
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Community Activities" loading="lazy" src="792109356_122242425812094148_3966266776684682550_n.jpg"/>
+<div class="gallery-overlay">
+<span>Community Activities</span>
+<p>Community gatherings, programs, and public service activities.</p>
+</div>
+</div>
+<!-- Barangay Hall -->
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Hall" loading="lazy" src="789679888_2063816620924594_1176141089592297391_n.jpg"/>
+<div class="gallery-overlay">
+<span>Barangay Hall</span>
+<p>Barangay Santa Ines administrative and community center.</p>
+</div>
+</div>
+<!-- Disaster Response -->
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Immediate Emergency Response Activities" loading="lazy" src="657472230_122228000996094148_8046822310188159120_n.jpg"/>
+<div class="gallery-overlay">
+<span>Emergency Response</span>
+<p>Emergency preparedness, response operations, and relief activities.</p>
+</div>
+</div>
+<!-- Infrastructure Projects -->
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Infrastructure Projects" loading="lazy" src="656551650_122227751294094148_946408568073443138_n.jpg"/>
+<div class="gallery-overlay">
+<span>Infrastructure Projects</span>
+<p>Road, drainage, lighting, and community improvement projects.</p>
+</div>
+</div>
+<!-- Health -->
+<div class="gallery-card">
+<img alt="Health Services" loading="lazy" src="663189622_122228962124094148_6442473490748682665_n.jpg"/>
+<div class="gallery-overlay">
+<span>Health Programs &amp; Services</span>
+<p>Prioritizing citizens to prevent health risks.</p>
+</div>
+</div>
+<!-- Clean-up Drives -->
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Clean-up Drive" loading="lazy" src="783727632_122241364622094148_7258872288002436896_n.jpg"/>
+<div class="gallery-overlay">
+<span>Clean-up Drives</span>
+<p>Environmental activities and community cleanliness campaigns.</p>
+</div>
+</div>
+<!-- Sports Events -->
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Sports Events" loading="lazy" src="786930157_122256448226090885_1000437174892445400_n.jpg"/>
+<div class="gallery-overlay">
+<span>Sports Events</span>
+<p>Barangay sports leagues, tournaments, and recreational activities.</p>
+</div>
+</div>
+<!-- Youth Activities -->
+<div class="gallery-card">
+<img alt="Barangay Santa Ines Youth Activities" loading="lazy" src="505080281_122210837456090885_8005276780604705660_n.jpg"/>
+<div class="gallery-overlay">
+<span>Youth Activities</span>
+<p>SK programs, youth development, volunteer work, and events.</p>
+</div>
+</div>
 </div>
 ```
 
   </div>
-
-  <button class="gallery-arrow gallery-next" onclick="moveGallery(1)" aria-label="Next photo">
+<button aria-label="Next photo" class="gallery-arrow gallery-next" onclick="moveGallery(1)">
     ❯
   </button>
-
 </div>
-
 <!-- Gallery Indicators -->
-
 <div class="gallery-dots" id="galleryDots"></div>
-
-      
-      <!-- Online Barangay Services Grid -->
-      <div class="section-title" id="services">
-        <span>Featured Barangay Services & Document Applications</span>
-      </div>
-
-      <div class="cards-grid" id="servicesGrid">
-        
-        <!-- Card 1 -->
-        <div class="sf-card" data-title="Barangay Clearance">
-          <span class="badge-choice">Most Requested</span>
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">📄</div>
-              <div>
-                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Barangay Clearance')">Barangay Clearance</a>
-                <div class="card-rating">
-                  <span class="stars">★★★★★</span>
-                  <span>(4.9 / 5.0 - 1,280 Processed)</span>
-                </div>
-              </div>
-            </div>
-            <p class="card-description">Official document required for employment, postal ID, bank transactions, and legal identification verification.</p>
-          </div>
-          <div>
-            <div class="card-meta">
-              <span>Processing: <strong>1 Business Day</strong></span>
-              <span>Fee: <strong>₱50.00</strong></span>
-            </div>
-            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Barangay Clearance')">Apply Online</button>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="sf-card" data-title="Certificate of Indigency">
-          <span class="badge-choice">Free Service</span>
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">🏥</div>
-              <div>
-                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Certificate of Indigency')">Certificate of Indigency</a>
-                <div class="card-rating">
-                  <span class="stars">★★★★★</span>
-                  <span>(5.0 / 5.0 - 940 Processed)</span>
-                </div>
-              </div>
-            </div>
-            <p class="card-description">Issued for medical assistance, educational scholarship, financial aid, and DSWD program enrollment.</p>
-          </div>
-          <div>
-            <div class="card-meta">
-              <span>Processing: <strong>Same Day</strong></span>
-              <span>Fee: <strong>FREE</strong></span>
-            </div>
-            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Certificate of Indigency')">Apply Online</button>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="sf-card" data-title="Business Permit Clearance">
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">🏪</div>
-              <div>
-                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Business Permit Clearance')">Business Permit Clearance</a>
-                <div class="card-rating">
-                  <span class="stars">★★★★☆</span>
-                  <span>(4.8 / 5.0 - 310 Processed)</span>
-                </div>
-              </div>
-            </div>
-            <p class="card-description">Required endorsement for sari-sari stores, commercial establishments, and micro-enterprises operating within Sta. Ines.</p>
-          </div>
-          <div>
-            <div class="card-meta">
-              <span>Processing: <strong>2 Business Days</strong></span>
-              <span>Fee: <strong>₱150.00</strong></span>
-            </div>
-            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Business Permit Clearance')">Apply Online</button>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="sf-card" data-title="Certificate of Residency">
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">🏠</div>
-              <div>
-                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('Certificate of Residency')">Certificate of Residency</a>
-                <div class="card-rating">
-                  <span class="stars">★★★★★</span>
-                  <span>(4.9 / 5.0 - 850 Processed)</span>
-                </div>
-              </div>
-            </div>
-            <p class="card-description">Official proof of bonafide residency within Barangay Santa Ines for voter registration, utility connection, and school requirements.</p>
-          </div>
-          <div>
-            <div class="card-meta">
-              <span>Processing: <strong>1 Business Day</strong></span>
-              <span>Fee: <strong>₱50.00</strong></span>
-            </div>
-            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('Certificate of Residency')">Apply Online</button>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="sf-card" data-title="First Time Job Seeker Certificate">
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">💼</div>
-              <div>
-                <a href="javascript:void(0)" class="card-title" onclick="openClearanceModal('First Time Job Seeker Certificate')">First Time Job Seeker Certificate</a>
-                <div class="card-rating">
-                  <span class="stars">★★★★★</span>
-                  <span>(4.9 / 5.0 - 850 Processed)</span>
-                </div>
-              </div>
-            </div>
-            <p class="card-description">Official certification confirming first-time job seeker status within Barangay Santa Ines for pre-employment application requirements and government fee exemptions.</p>
-          </div>
-          <div>
-            <div class="card-meta">
-              <span>Processing: <strong>1 Business Day</strong></span>
-              <span>Fee: <strong>Free</strong></span>
-            </div>
-            <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="openClearanceModal('First Time Job Seeker Certificate')">Apply Online</button>
-          </div>
-        </div>
-
-      </div>
+<!-- Online Barangay Services Grid -->
+<div class="section-title" id="services">
+<span>Featured Barangay Services &amp; Document Applications</span>
+</div>
+<div class="cards-grid" id="servicesGrid">
+<!-- Card 1 -->
+<div class="sf-card" data-title="Barangay Clearance">
+<span class="badge-choice">Most Requested</span>
+<div>
+<div class="card-header-group">
+<div class="card-icon">📄</div>
+<div>
+<a class="card-title" href="javascript:void(0)" onclick="openClearanceModal('Barangay Clearance')">Barangay Clearance</a>
+<div class="card-rating">
+<span class="stars">★★★★★</span>
+<span>(4.9 / 5.0 - 1,280 Processed)</span>
+</div>
+</div>
+</div>
+<p class="card-description">Official document required for employment, postal ID, bank transactions, and legal identification verification.</p>
+</div>
+<div>
+<div class="card-meta">
+<span>Processing: <strong>1 Business Day</strong></span>
+<span>Fee: <strong>₱50.00</strong></span>
+</div>
+<button class="btn btn-orange" onclick="openClearanceModal('Barangay Clearance')" style="width:100%; justify-content:center;">Apply Online</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="sf-card" data-title="Certificate of Indigency">
+<span class="badge-choice">Free Service</span>
+<div>
+<div class="card-header-group">
+<div class="card-icon">🏥</div>
+<div>
+<a class="card-title" href="javascript:void(0)" onclick="openClearanceModal('Certificate of Indigency')">Certificate of Indigency</a>
+<div class="card-rating">
+<span class="stars">★★★★★</span>
+<span>(5.0 / 5.0 - 940 Processed)</span>
+</div>
+</div>
+</div>
+<p class="card-description">Issued for medical assistance, educational scholarship, financial aid, and DSWD program enrollment.</p>
+</div>
+<div>
+<div class="card-meta">
+<span>Processing: <strong>Same Day</strong></span>
+<span>Fee: <strong>FREE</strong></span>
+</div>
+<button class="btn btn-orange" onclick="openClearanceModal('Certificate of Indigency')" style="width:100%; justify-content:center;">Apply Online</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="sf-card" data-title="Business Permit Clearance">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🏪</div>
+<div>
+<a class="card-title" href="javascript:void(0)" onclick="openClearanceModal('Business Permit Clearance')">Business Permit Clearance</a>
+<div class="card-rating">
+<span class="stars">★★★★☆</span>
+<span>(4.8 / 5.0 - 310 Processed)</span>
+</div>
+</div>
+</div>
+<p class="card-description">Required endorsement for sari-sari stores, commercial establishments, and micro-enterprises operating within Sta. Ines.</p>
+</div>
+<div>
+<div class="card-meta">
+<span>Processing: <strong>2 Business Days</strong></span>
+<span>Fee: <strong>₱150.00</strong></span>
+</div>
+<button class="btn btn-orange" onclick="openClearanceModal('Business Permit Clearance')" style="width:100%; justify-content:center;">Apply Online</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="sf-card" data-title="Certificate of Residency">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🏠</div>
+<div>
+<a class="card-title" href="javascript:void(0)" onclick="openClearanceModal('Certificate of Residency')">Certificate of Residency</a>
+<div class="card-rating">
+<span class="stars">★★★★★</span>
+<span>(4.9 / 5.0 - 850 Processed)</span>
+</div>
+</div>
+</div>
+<p class="card-description">Official proof of bonafide residency within Barangay Santa Ines for voter registration, utility connection, and school requirements.</p>
+</div>
+<div>
+<div class="card-meta">
+<span>Processing: <strong>1 Business Day</strong></span>
+<span>Fee: <strong>₱50.00</strong></span>
+</div>
+<button class="btn btn-orange" onclick="openClearanceModal('Certificate of Residency')" style="width:100%; justify-content:center;">Apply Online</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="sf-card" data-title="First Time Job Seeker Certificate">
+<div>
+<div class="card-header-group">
+<div class="card-icon">💼</div>
+<div>
+<a class="card-title" href="javascript:void(0)" onclick="openClearanceModal('First Time Job Seeker Certificate')">First Time Job Seeker Certificate</a>
+<div class="card-rating">
+<span class="stars">★★★★★</span>
+<span>(4.9 / 5.0 - 850 Processed)</span>
+</div>
+</div>
+</div>
+<p class="card-description">Official certification confirming first-time job seeker status within Barangay Santa Ines for pre-employment application requirements and government fee exemptions.</p>
+</div>
+<div>
+<div class="card-meta">
+<span>Processing: <strong>1 Business Day</strong></span>
+<span>Fee: <strong>Free</strong></span>
+</div>
+<button class="btn btn-orange" onclick="openClearanceModal('First Time Job Seeker Certificate')" style="width:100%; justify-content:center;">Apply Online</button>
+</div>
+</div>
+</div>
 
       ```
   <!-- Barangay Achievements & Accomplishments -->
-  <div class="section-title" id="achievements">
-    <span>Barangay Achievements & Accomplishments</span>
-  </div>
-
-  <div class="cards-grid">
-
-    <!-- Achievement 1 -->
-    <div class="sf-card">
-      <div>
-        <div class="card-header-group">
-          <div class="card-icon">🏆</div>
-          <div>
-            <div class="card-title" style="color:var(--sf-text-main);">
+<div class="section-title" id="achievements">
+<span>Barangay Achievements &amp; Accomplishments</span>
+</div>
+<div class="cards-grid">
+<!-- Achievement 1 -->
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🏆</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
               Outstanding Community Service
             </div>
-            <div class="card-rating">
-              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="card-description">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+</div>
+</div>
+</div>
+<p class="card-description">
           Successful implementation of community-focused programs that
           strengthen public service delivery, resident participation,
           and barangay engagement.
         </p>
-      </div>
-
-      <div class="card-meta">
-        <span>Recognition Year: <strong>2026</strong></span>
-        <span>Status: <strong>Completed</strong></span>
-      </div>
-    </div>
-
-    <!-- Achievement 2 -->
-    <div class="sf-card">
-      <div>
-        <div class="card-header-group">
-          <div class="card-icon">🌱</div>
-          <div>
-            <div class="card-title" style="color:var(--sf-text-main);">
-              Environmental & Clean Community Program
+</div>
+<div class="card-meta">
+<span>Recognition Year: <strong>2026</strong></span>
+<span>Status: <strong>Completed</strong></span>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🌱</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
+              Environmental &amp; Clean Community Program
             </div>
-            <div class="card-rating">
-              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="card-description">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+</div>
+</div>
+</div>
+<p class="card-description">
           Conducted regular clean-up activities, waste-management
           initiatives, and environmental awareness campaigns to promote
           a cleaner and healthier Barangay Santa Ines.
         </p>
-      </div>
-
-      <div class="card-meta">
-        <span>Coverage: <strong>Barangay-wide</strong></span>
-        <span>Status: <strong>Completed</strong></span>
-      </div>
-    </div>
-
-    <!-- Achievement 3 -->
-    <div class="sf-card">
-      <div>
-        <div class="card-header-group">
-          <div class="card-icon">💡</div>
-          <div>
-            <div class="card-title" style="color:var(--sf-text-main);">
-              Improved Community Safety & Street Lighting
+</div>
+<div class="card-meta">
+<span>Coverage: <strong>Barangay-wide</strong></span>
+<span>Status: <strong>Completed</strong></span>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">💡</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
+              Improved Community Safety &amp; Street Lighting
             </div>
-            <div class="card-rating">
-              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="card-description">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+</div>
+</div>
+</div>
+<p class="card-description">
           Expanded community safety initiatives and improved lighting
           coverage in selected roads and public areas to support safer
           movement for residents, workers, and visitors.
         </p>
-      </div>
-
-      <div class="card-meta">
-        <span>Program: <strong>Public Safety</strong></span>
-        <span>Status: <strong>Completed</strong></span>
-      </div>
-    </div>
-
-    <!-- Achievement 4 -->
-    <div class="sf-card">
-      <div>
-        <div class="card-header-group">
-          <div class="card-icon">🤝</div>
-          <div>
-            <div class="card-title" style="color:var(--sf-text-main);">
-              Youth & Community Engagement
+</div>
+<div class="card-meta">
+<span>Program: <strong>Public Safety</strong></span>
+<span>Status: <strong>Completed</strong></span>
+</div>
+</div>
+<!-- Achievement 4 -->
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🤝</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
+              Youth &amp; Community Engagement
             </div>
-            <div class="card-rating">
-              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="card-description">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+</div>
+</div>
+</div>
+<p class="card-description">
           Supported youth activities, sports programs, volunteer
           initiatives, and community participation projects that encourage
           active involvement in barangay development.
         </p>
-      </div>
-
-      <div class="card-meta">
-        <span>Beneficiaries: <strong>Youth & Residents</strong></span>
-        <span>Status: <strong>Completed</strong></span>
-      </div>
-    </div>
-
-    <!-- Achievement 5 -->
-    <div class="sf-card">
-      <div>
-        <div class="card-header-group">
-          <div class="card-icon">🚨</div>
-          <div>
-            <div class="card-title" style="color:var(--sf-text-main);">
-              Disaster Preparedness & Response
+</div>
+<div class="card-meta">
+<span>Beneficiaries: <strong>Youth &amp; Residents</strong></span>
+<span>Status: <strong>Completed</strong></span>
+</div>
+</div>
+<!-- Achievement 5 -->
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🚨</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
+              Disaster Preparedness &amp; Response
             </div>
-            <div class="card-rating">
-              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="card-description">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+</div>
+</div>
+</div>
+<p class="card-description">
           Strengthened disaster preparedness through community
           coordination, emergency response activities, awareness
           campaigns, and risk-reduction initiatives.
         </p>
-      </div>
-
-      <div class="card-meta">
-        <span>Focus: <strong>Disaster Risk Reduction</strong></span>
-        <span>Status: <strong>Completed</strong></span>
-      </div>
-    </div>
-
-    <!-- Achievement 6 -->
-    <div class="sf-card">
-      <div>
-        <div class="card-header-group">
-          <div class="card-icon">💻</div>
-          <div>
-            <div class="card-title" style="color:var(--sf-text-main);">
+</div>
+<div class="card-meta">
+<span>Focus: <strong>Disaster Risk Reduction</strong></span>
+<span>Status: <strong>Completed</strong></span>
+</div>
+</div>
+<!-- Achievement 6 -->
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">💻</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
               Digital Barangay Service Improvement
             </div>
-            <div class="card-rating">
-              <span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="card-description">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">● Accomplished</span>
+</div>
+</div>
+</div>
+<p class="card-description">
           Improved access to barangay information and online services
           through digital systems for document requests, public
           information, and community communication.
         </p>
-      </div>
-
-      <div class="card-meta">
-        <span>Program: <strong>e-Governance</strong></span>
-        <span>Status: <strong>Completed</strong></span>
-
-      </div>
-    </div>
-
-  </div>
-
-  
-
-      <!-- Infrastructure Projects & Community Corner -->
-      <div class="section-title" id="projects">
-        <span>Community Development & Infrastructure Projects</span>
-      </div>
-
-      <div class="cards-grid">
-        <div class="sf-card">
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">💡</div>
-              <div>
-                <div class="card-title" style="color:var(--sf-text-main);">Solar Streetlight Expansion Phase III</div>
-                <div class="card-rating"><span style="color:var(--sf-green); font-weight:700;">● In Progress (85%)</span></div>
-              </div>
-            </div>
-            <p class="card-description">Installation of 60 smart LED solar-powered streetlights along Purok 3 to Purok 5 provincial roads.</p>
-          </div>
-          <div class="card-meta">
-            <span>Target Completion: <strong>Oct 2026</strong></span>
-            <span>Budget: <strong>₱450,000</strong></span>
-          </div>
-        </div>
-
-        <div class="sf-card">
-          <div>
-            <div class="card-header-group">
-              <div class="card-icon">🧱</div>
-              <div>
-                <div class="card-title" style="color:var(--sf-text-main);">Drainage System & Flood Control Dredging</div>
-                <div class="card-rating"><span style="color:var(--sf-blue); font-weight:700;">● Scheduled</span></div>
-              </div>
-            </div>
-            <p class="card-description">Desilting of main arterial drainage canals ahead of monsoon season to protect residential areas.</p>
-          </div>
-          <div class="card-meta">
-            <span>Target Completion: <strong>Nov 2026</strong></span>
-            <span>Budget: <strong>₱320,000</strong></span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Barangay Events & Community Calendar -->
-<div class="section-title" id="events">
-  <span>Barangay Events & Community Calendar</span>
 </div>
-
+<div class="card-meta">
+<span>Program: <strong>e-Governance</strong></span>
+<span>Status: <strong>Completed</strong></span>
+</div>
+</div>
+</div>
+<!-- Infrastructure Projects & Community Corner -->
+<div class="section-title" id="projects">
+<span>Community Development &amp; Infrastructure Projects</span>
+</div>
 <div class="cards-grid">
-
-  <div class="sf-card">
-    <div>
-      <div class="card-header-group">
-        <div class="card-icon">📅</div>
-        <div>
-          <div class="card-title" style="color:var(--sf-text-main);">
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">💡</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">Solar Streetlight Expansion Phase III</div>
+<div class="card-rating"><span style="color:var(--sf-green); font-weight:700;">● In Progress (85%)</span></div>
+</div>
+</div>
+<p class="card-description">Installation of 60 smart LED solar-powered streetlights along Purok 3 to Purok 5 provincial roads.</p>
+</div>
+<div class="card-meta">
+<span>Target Completion: <strong>Oct 2026</strong></span>
+<span>Budget: <strong>₱450,000</strong></span>
+</div>
+</div>
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">🧱</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">Drainage System &amp; Flood Control Dredging</div>
+<div class="card-rating"><span style="color:var(--sf-blue); font-weight:700;">● Scheduled</span></div>
+</div>
+</div>
+<p class="card-description">Desilting of main arterial drainage canals ahead of monsoon season to protect residential areas.</p>
+</div>
+<div class="card-meta">
+<span>Target Completion: <strong>Nov 2026</strong></span>
+<span>Budget: <strong>₱320,000</strong></span>
+</div>
+</div>
+</div>
+<!-- Barangay Events & Community Calendar -->
+<div class="section-title" id="events">
+<span>Barangay Events &amp; Community Calendar</span>
+</div>
+<div class="cards-grid">
+<div class="sf-card">
+<div>
+<div class="card-header-group">
+<div class="card-icon">📅</div>
+<div>
+<div class="card-title" style="color:var(--sf-text-main);">
             Barangay General Assembly
           </div>
-          <div class="card-rating">
-            <span style="color:var(--sf-green); font-weight:700;">
+<div class="card-rating">
+<span style="color:var(--sf-green); font-weight:700;">
               ● Upcoming
             </span>
-          </div>
-        </div>
-      </div>
-
-      <p class="card-description">
+</div>
+</div>
+</div>
+<p class="card-description">
         Community assembly for residents to receive updates, discuss
         barangay programs, and raise community concerns.
       </p>
-    </div>
-
-    <div class="card-meta">
-      <span>Date: <strong>September 28, 2026</strong></span>
-      <span>Time: <strong>2:00 PM</strong></span>
-    </div>
-
-    <button class="btn btn-orange"
-      style="width:100%; justify-content:center;"
-      onclick="showToast('Event registration feature coming soon.')">
+</div>
+<div class="card-meta">
+<span>Date: <strong>September 28, 2026</strong></span>
+<span>Time: <strong>2:00 PM</strong></span>
+</div>
+<button class="btn btn-orange" onclick="showToast('Event registration feature coming soon.')" style="width:100%; justify-content:center;">
       View Event
     </button>
-  </div>
-
 </div>
-      <!-- Barangay Ordinances Categories Directory -->
+</div>
+<!-- Barangay Ordinances Categories Directory -->
 <div class="section-title" id="ordinances">
-  <span>Barangay Ordinances & Legislative Records</span>
+<span>Barangay Ordinances &amp; Legislative Records</span>
 </div>
-
 <div class="categories-grid">
-  <a href="government-benefits.html" class="cat-item">
-  <span>Government Benefits Directory</span>
-  <span class="cat-count">06</span>
+<a class="cat-item" href="government-benefits.html">
+<span>Government Benefits Directory</span>
+<span class="cat-count">06</span>
 </a>
-  <a href="environmental-protection.html" class="cat-item">
-    <span>Environmental Protection</span>
-    <span class="cat-count">14</span>
-  </a>
-  <a href="peace-order-curfew.html" class="cat-item">
-    <span>Peace, Order & Curfew</span>
-    <span class="cat-count">22</span>
-  </a>
-  <a href="business-vendor-code.html" class="cat-item">
-    <span>Business & Vendor Code</span>
-    <span class="cat-count">09</span>
-  </a>
-  <a href="health-sanitation.html" class="cat-item">
-    <span>Health & Sanitation</span>
-    <span class="cat-count">18</span>
-  </a>
-  <a href="youth-sports-development.html" class="cat-item">
-    <span>Youth & Sports Development</span>
-    <span class="cat-count">11</span>
-  </a>
-  <a href="disaster-risk-management.html" class="cat-item">
-    <span>Disaster Risk Management</span>
-    <span class="cat-count">07</span>
-  </a>
+<a class="cat-item" href="environmental-protection.html">
+<span>Environmental Protection</span>
+<span class="cat-count">14</span>
+</a>
+<a class="cat-item" href="peace-order-curfew.html">
+<span>Peace, Order &amp; Curfew</span>
+<span class="cat-count">22</span>
+</a>
+<a class="cat-item" href="business-vendor-code.html">
+<span>Business &amp; Vendor Code</span>
+<span class="cat-count">09</span>
+</a>
+<a class="cat-item" href="health-sanitation.html">
+<span>Health &amp; Sanitation</span>
+<span class="cat-count">18</span>
+</a>
+<a class="cat-item" href="youth-sports-development.html">
+<span>Youth &amp; Sports Development</span>
+<span class="cat-count">11</span>
+</a>
+<a class="cat-item" href="disaster-risk-management.html">
+<span>Disaster Risk Management</span>
+<span class="cat-count">07</span>
+</a>
 </div>
+</section>
+<!-- Right Sidebar (Barangay Information & Emergency Directory) -->
+<aside>
+<!-- Barangay Officials List Widget -->
+<div class="sidebar-widget" id="directory">
+<div class="widget-title">Barangay Council</div>
+<div class="official-item">
+<div class="official-avatar" style="background:#ff6600; color:#fff;">PB</div>
+<div class="official-info">
+<h5>Hon. Melgazar C. Balancio Jr.</h5>
+<p>Punong Barangay (Captain)</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K1</div>
+<div class="official-info">
+<h5>Hon. Yolanda F. Antolin</h5>
+<p>Kagawad - Health &amp; Sanitation</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K2</div>
+<div class="official-info">
+<h5>Hon. Jayvee C. Sevillaga</h5>
+<p>Kagawad - Peace &amp; Order</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K3</div>
+<div class="official-info">
+<h5>Hon. Jing Cabanero</h5>
+<p>Kagawad - Infrastructure</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K4</div>
+<div class="official-info">
+<h5>Hon. Marnelyn Calpito</h5>
+<p>Kagawad - Infrastructure</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K5</div>
+<div class="official-info">
+<h5>Hon. Alvin C. Abuan</h5>
+<p>Kagawad - Infrastructure</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K6</div>
+<div class="official-info">
+<h5>Hon. Elner Calpito</h5>
+<p>Kagawad - Infrastructure</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">K7</div>
+<div class="official-info">
+<h5>Hon. Jonathan Calpito</h5>
+<p>Kagawad - Infrastructure</p>
+</div>
+</div>
+<div class="official-item">
+<div class="official-avatar">SK</div>
+<div class="official-info">
+<h5>Hon. Paulo C. Rabanal Jr.</h5>
+<p>SK Chairperson</p>
+</div>
+</div>
+</div>
+<!-- Emergency Desk Hotline Widget -->
+<div class="sidebar-widget">
+<div class="widget-title">Emergency Contact Desk</div>
+<div style="font-size:13px; line-height:1.6; color:#334155;">
+<p style="margin-bottom:8px;"><strong>🚨 Punong Barangay Hotline:</strong><br/><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+<p style="margin-bottom:8px;"><strong>🚨 Barangay Tanod Hotline:</strong><br/><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+<p style="margin-bottom:8px;"><strong>🚑 Sta. Ines Health Center:</strong><br/><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+<p style="margin-bottom:8px;"><strong>🚒 Paniqui Fire Station:</strong><br/><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+<p><strong>👮 PNP Paniqui:</strong><br/><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
+</div>
+<button class="btn btn-orange" onclick="openBlotterModal()" style="width:100%; margin-top:14px; justify-content:center;">File Online Incident Report</button>
+</div>
+<!-- Quick Document Verification Box -->
+<div class="sidebar-widget">
+<div class="widget-title">Quick Status Lookup</div>
+<p style="font-size:12px; color:var(--sf-text-muted); margin-bottom:10px;">Enter your Request or Ticket Reference ID to check real-time status.</p>
+<input class="form-control" id="quickTrackInput" placeholder="e.g., BSI-2026-8921" style="margin-bottom:10px;" type="text"/>
+<button class="btn btn-outline" onclick="quickTrackLookup()" style="width:100%; justify-content:center; background:#12161a; color:#fff;">Verify Request</button>
+</div>
+</aside>
+</main>
+<!-- Application / Clearance Request Modal -->
+<div class="modal-overlay" id="clearanceModal">
+<div class="modal-window">
+<div class="modal-header">
+<div class="modal-title" id="clearanceModalTitle">File Document Application</div>
+<button class="modal-close" onclick="closeModal('clearanceModal')">×</button>
+</div>
+<div class="modal-body">
+<form id="clearanceForm" onsubmit="handleClearanceSubmit(event)">
+<input id="appType" type="hidden" value="Barangay Clearance"/>
+<div class="form-group">
+<label>Full Name (First, Middle, Last)</label>
+<input class="form-control" id="appFullName" placeholder="e.g. Juan dela Cruz" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Complete Purok / Street Address</label>
+<input class="form-control" id="appAddress" placeholder="e.g. Purok 2, Main Street" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Contact Number</label>
+<input class="form-control" id="appPhone" placeholder="e.g. 09171234567" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label>Purpose of Request</label>
+<select class="form-control" id="appPurpose" required="">
+<option value="Employment Requirement">Local / Overseas Employment</option>
+<option value="Postal / Government ID Application">ID Application (Postal, Passport, etc.)</option>
+<option value="Bank Account Opening">Bank Account Opening</option>
+<option value="School / Scholarship Requirement">School / Scholarship</option>
+<option value="Business Operation Permit">Business Operation</option>
+</select>
+</div>
+<button class="btn btn-orange" style="width:100%; justify-content:center; padding:12px; margin-top:10px;" type="submit">Submit Online Application</button>
+</form>
+<div class="output-box" id="clearanceResult" style="display:none;"></div>
+</div>
+</div>
+</div>
+<!-- Incident Report / Blotter Modal -->
+<div class="modal-overlay" id="blotterModal">
+<div class="modal-window">
+<div class="modal-header">
+<div class="modal-title">File Barangay Incident / Blotter Report</div>
+<button class="modal-close" onclick="closeModal('blotterModal')">×</button>
+</div>
+<div class="modal-body">
+<form id="blotterForm" onsubmit="handleBlotterSubmit(event)">
+<div class="form-group">
+<label>Complainant Name (Optional / Confidential)</label>
+<input class="form-control" id="blotterName" placeholder="Leave blank for confidential reporting" type="text"/>
+</div>
+<div class="form-group">
+<label>Incident Type</label>
+<select class="form-control" id="blotterType" required="">
+<option value="Noise Disturbance / Nuisance">Noise Disturbance / Nuisance</option>
+<option value="Property Dispute / Boundary">Property Dispute</option>
+<option value="Public Safety / Barangay Tanod Concern">Public Safety Concern</option>
+<option value="Waste Disposal / Environmental Issue">Waste / Sanitation Concern</option>
+<option value="Other Community Dispute">Other Concern</option>
+</select>
+</div>
+<div class="form-group">
+<label>Incident Location (Purok / Landmark)</label>
+<input class="form-control" id="blotterLocation" placeholder="e.g., Near Purok 4 Basketball Court" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Detailed Incident Description</label>
+<textarea class="form-control" id="blotterDetails" placeholder="Describe what happened, dates, and parties involved..." required="" rows="4"></textarea>
+</div>
+<button class="btn btn-orange" style="width:100%; justify-content:center; padding:12px;" type="submit">Submit Incident Ticket</button>
+</form>
+<div class="output-box" id="blotterResult" style="display:none;"></div>
+</div>
+</div>
+</div>
+<!-- Track Request Status Modal -->
+<div class="modal-overlay" id="trackModal">
+<div class="modal-window">
+<div class="modal-header">
+<div class="modal-title">Track Document / Ticket Status</div>
+<button class="modal-close" onclick="closeModal('trackModal')">×</button>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>Reference Number</label>
+<input class="form-control" id="trackInput" placeholder="e.g., BSI-2026-9812" type="text"/>
+</div>
+<button class="btn btn-orange" onclick="performTracking()" style="width:100%; justify-content:center;">Search Database</button>
+<div class="output-box" id="trackResult" style="display:none; margin-top:16px;"></div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Bar -->
+<div class="toast" id="toast"></div>
+<!-- SourceForge Dark Footer -->
+<footer>
+<div class="footer-container">
+<div class="footer-col">
+<h4>Barangay Santa Ines</h4>
+<ul>
+<li>Multi-Purpose Hall</li>
+<li>Paniqui, Tarlac 2307</li>
+<li>Philippines</li>
+<li>Hours: Mon - Fri (8:00 AM - 5:00 PM)</li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>e-Services</h4>
+<ul>
+<li><a href="javascript:void(0)" onclick="openClearanceModal('Barangay Clearance')">Barangay Clearance</a></li>
+<li><a href="javascript:void(0)" onclick="openClearanceModal('Certificate of Indigency')">Certificate of Indigency</a></li>
+<li><a href="javascript:void(0)" onclick="openClearanceModal('Business Permit Clearance')">Business Permit Endorsement</a></li>
+<li><a href="javascript:void(0)" onclick="openClearanceModal('Certificate of Residency')">Residency Certification</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Public Records</h4>
+<ul>
+<li><a href="#ordinances">Barangay Ordinances</a></li>
+<li><a href="#projects">Infrastructure Transparency</a></li>
+<li><a href="#directory">Barangay Council Roster</a></li>
+<li><a href="javascript:void(0)" onclick="openBlotterModal()">Blotter Desk</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Emergency Hotline</h4>
+<ul>
+<li style="color:#ffffff; font-weight:700;">Barangay Tanod: (045) 931-0199</li>
+<li>LGU Paniqui: (045) 931-0222</li>
+<li>National Emergency: 911</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div>© 2026 Barangay Santa Ines, Municipality of Paniqui, Province of Tarlac. All Rights Reserved.</div>
+<div style="display:flex; gap:16px;">
+<a href="#" style="color:#94a3b8; text-decoration:none;">Privacy Policy</a>
+<a href="#" style="color:#94a3b8; text-decoration:none;">Terms of Public Use</a>
+<a href="#" style="color:#94a3b8; text-decoration:none;">Freedom of Information</a>
+</div>
+</div>
+</footer>
+<!-- Application Logic JavaScript -->
+<script>
+    /* =========================================================
+       BARANGAY SANTA INES E-BARANGAY PORTAL
+       GOOGLE SHEETS / APPS SCRIPT INTEGRATION
+       =========================================================
 
-    </section>
+       IMPORTANT:
+       Replace GOOGLE_SCRIPT_URL with your deployed Apps Script
+       Web App URL ending in /exec.
+    ========================================================= */
 
-    <!-- Right Sidebar (Barangay Information & Emergency Directory) -->
-    <aside>
-      
-      <!-- Barangay Officials List Widget -->
-      <div class="sidebar-widget" id="directory">
-        <div class="widget-title">Barangay Council</div>
-        
-        <div class="official-item">
-          <div class="official-avatar" style="background:#ff6600; color:#fff;">PB</div>
-          <div class="official-info">
-            <h5>Hon. Melgazar C. Balancio Jr.</h5>
-            <p>Punong Barangay (Captain)</p>
-          </div>
-        </div>
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWtdAjC4w3_goVMrq-_5WTGoJfxqCMHrQgxqmYG64X_slQASTBTDZ7kNrcnChRFfng/exec';
 
-        <div class="official-item">
-          <div class="official-avatar">K1</div>
-          <div class="official-info">
-            <h5>Hon. Yolanda F. Antolin</h5>
-            <p>Kagawad - Health & Sanitation</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">K2</div>
-          <div class="official-info">
-            <h5>Hon. Jayvee C. Sevillaga</h5>
-            <p>Kagawad - Peace & Order</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">K3</div>
-          <div class="official-info">
-            <h5>Hon. Jing Cabanero</h5>
-            <p>Kagawad - Infrastructure</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">K4</div>
-          <div class="official-info">
-            <h5>Hon. Marnelyn Calpito</h5>
-            <p>Kagawad - Infrastructure</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">K5</div>
-          <div class="official-info">
-            <h5>Hon. Alvin C. Abuan</h5>
-            <p>Kagawad - Infrastructure</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">K6</div>
-          <div class="official-info">
-            <h5>Hon. Elner Calpito</h5>
-            <p>Kagawad - Infrastructure</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">K7</div>
-          <div class="official-info">
-            <h5>Hon. Jonathan Calpito</h5>
-            <p>Kagawad - Infrastructure</p>
-          </div>
-        </div>
-
-        <div class="official-item">
-          <div class="official-avatar">SK</div>
-          <div class="official-info">
-            <h5>Hon. Paulo C. Rabanal Jr.</h5>
-            <p>SK Chairperson</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Emergency Desk Hotline Widget -->
-      <div class="sidebar-widget">
-        <div class="widget-title">Emergency Contact Desk</div>
-        <div style="font-size:13px; line-height:1.6; color:#334155;">
-                    <p style="margin-bottom:8px;"><strong>🚨 Punong Barangay Hotline:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
-          <p style="margin-bottom:8px;"><strong>🚨 Barangay Tanod Hotline:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
-          <p style="margin-bottom:8px;"><strong>🚑 Sta. Ines Health Center:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
-          <p style="margin-bottom:8px;"><strong>🚒 Paniqui Fire Station:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
-          <p><strong>👮 PNP Paniqui:</strong><br><span style="color:var(--sf-orange); font-weight:700; font-size:15px;">(045) 931-0199</span></p>
-        </div>
-        <button class="btn btn-orange" style="width:100%; margin-top:14px; justify-content:center;" onclick="openBlotterModal()">File Online Incident Report</button>
-      </div>
-
-      <!-- Quick Document Verification Box -->
-      <div class="sidebar-widget">
-        <div class="widget-title">Quick Status Lookup</div>
-        <p style="font-size:12px; color:var(--sf-text-muted); margin-bottom:10px;">Enter your Request or Ticket Reference ID to check real-time status.</p>
-        <input type="text" id="quickTrackInput" class="form-control" placeholder="e.g., BSI-2026-8921" style="margin-bottom:10px;">
-        <button class="btn btn-outline" style="width:100%; justify-content:center; background:#12161a; color:#fff;" onclick="quickTrackLookup()">Verify Request</button>
-      </div>
-
-    </aside>
-
-  </main>
-
-  <!-- Application / Clearance Request Modal -->
-  <div class="modal-overlay" id="clearanceModal">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title" id="clearanceModalTitle">File Document Application</div>
-        <button class="modal-close" onclick="closeModal('clearanceModal')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form id="clearanceForm" onsubmit="handleClearanceSubmit(event)">
-          <input type="hidden" id="appType" value="Barangay Clearance">
-          
-          <div class="form-group">
-            <label>Full Name (First, Middle, Last)</label>
-            <input type="text" id="appFullName" class="form-control" placeholder="e.g. Juan dela Cruz" required>
-          </div>
-
-          <div class="form-group">
-            <label>Complete Purok / Street Address</label>
-            <input type="text" id="appAddress" class="form-control" placeholder="e.g. Purok 2, Main Street" required>
-          </div>
-
-          <div class="form-group">
-            <label>Contact Number</label>
-            <input type="tel" id="appPhone" class="form-control" placeholder="e.g. 09171234567" required>
-          </div>
-
-          <div class="form-group">
-            <label>Purpose of Request</label>
-            <select id="appPurpose" class="form-control" required>
-              <option value="Employment Requirement">Local / Overseas Employment</option>
-              <option value="Postal / Government ID Application">ID Application (Postal, Passport, etc.)</option>
-              <option value="Bank Account Opening">Bank Account Opening</option>
-              <option value="School / Scholarship Requirement">School / Scholarship</option>
-              <option value="Business Operation Permit">Business Operation</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-orange" style="width:100%; justify-content:center; padding:12px; margin-top:10px;">Submit Online Application</button>
-        </form>
-
-        <div id="clearanceResult" class="output-box" style="display:none;"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Incident Report / Blotter Modal -->
-  <div class="modal-overlay" id="blotterModal">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title">File Barangay Incident / Blotter Report</div>
-        <button class="modal-close" onclick="closeModal('blotterModal')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form id="blotterForm" onsubmit="handleBlotterSubmit(event)">
-          <div class="form-group">
-            <label>Complainant Name (Optional / Confidential)</label>
-            <input type="text" id="blotterName" class="form-control" placeholder="Leave blank for confidential reporting">
-          </div>
-
-          <div class="form-group">
-            <label>Incident Type</label>
-            <select id="blotterType" class="form-control" required>
-              <option value="Noise Disturbance / Nuisance">Noise Disturbance / Nuisance</option>
-              <option value="Property Dispute / Boundary">Property Dispute</option>
-              <option value="Public Safety / Barangay Tanod Concern">Public Safety Concern</option>
-              <option value="Waste Disposal / Environmental Issue">Waste / Sanitation Concern</option>
-              <option value="Other Community Dispute">Other Concern</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Incident Location (Purok / Landmark)</label>
-            <input type="text" id="blotterLocation" class="form-control" placeholder="e.g., Near Purok 4 Basketball Court" required>
-          </div>
-
-          <div class="form-group">
-            <label>Detailed Incident Description</label>
-            <textarea id="blotterDetails" class="form-control" rows="4" placeholder="Describe what happened, dates, and parties involved..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-orange" style="width:100%; justify-content:center; padding:12px;">Submit Incident Ticket</button>
-        </form>
-
-        <div id="blotterResult" class="output-box" style="display:none;"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Track Request Status Modal -->
-  <div class="modal-overlay" id="trackModal">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title">Track Document / Ticket Status</div>
-        <button class="modal-close" onclick="closeModal('trackModal')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label>Reference Number</label>
-          <input type="text" id="trackInput" class="form-control" placeholder="e.g., BSI-2026-9812">
-        </div>
-        <button class="btn btn-orange" style="width:100%; justify-content:center;" onclick="performTracking()">Search Database</button>
-
-        <div id="trackResult" class="output-box" style="display:none; margin-top:16px;"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification Bar -->
-  <div class="toast" id="toast"></div>
-
-  <!-- SourceForge Dark Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-col">
-        <h4>Barangay Santa Ines</h4>
-        <ul>
-          <li>Multi-Purpose Hall</li>
-          <li>Paniqui, Tarlac 2307</li>
-          <li>Philippines</li>
-          <li>Hours: Mon - Fri (8:00 AM - 5:00 PM)</li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>e-Services</h4>
-        <ul>
-          <li><a href="javascript:void(0)" onclick="openClearanceModal('Barangay Clearance')">Barangay Clearance</a></li>
-          <li><a href="javascript:void(0)" onclick="openClearanceModal('Certificate of Indigency')">Certificate of Indigency</a></li>
-          <li><a href="javascript:void(0)" onclick="openClearanceModal('Business Permit Clearance')">Business Permit Endorsement</a></li>
-          <li><a href="javascript:void(0)" onclick="openClearanceModal('Certificate of Residency')">Residency Certification</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Public Records</h4>
-        <ul>
-          <li><a href="#ordinances">Barangay Ordinances</a></li>
-          <li><a href="#projects">Infrastructure Transparency</a></li>
-          <li><a href="#directory">Barangay Council Roster</a></li>
-          <li><a href="javascript:void(0)" onclick="openBlotterModal()">Blotter Desk</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Emergency Hotline</h4>
-        <ul>
-          <li style="color:#ffffff; font-weight:700;">Barangay Tanod: (045) 931-0199</li>
-          <li>LGU Paniqui: (045) 931-0222</li>
-          <li>National Emergency: 911</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div>&copy; 2026 Barangay Santa Ines, Municipality of Paniqui, Province of Tarlac. All Rights Reserved.</div>
-      <div style="display:flex; gap:16px;">
-        <a href="#" style="color:#94a3b8; text-decoration:none;">Privacy Policy</a>
-        <a href="#" style="color:#94a3b8; text-decoration:none;">Terms of Public Use</a>
-        <a href="#" style="color:#94a3b8; text-decoration:none;">Freedom of Information</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Application Logic JavaScript -->
-  <script>
-    // LocalStorage State Management
-    const STORAGE_KEY = 'BSINes_Portal_Data';
-
-    function getStorageData() {
-      const data = localStorage.getItem(STORAGE_KEY);
-      return data ? JSON.parse(data) : { requests: [], blotters: [] };
+    /* ---------------------------------------------------------
+       Helper: check whether the Apps Script URL is configured
+    --------------------------------------------------------- */
+    function isGoogleScriptConfigured() {
+      return (
+        GOOGLE_SCRIPT_URL &&
+        GOOGLE_SCRIPT_URL !== 'PASTE_YOUR_WEB_APP_URL_HERE'
+      );
     }
 
-    function saveStorageData(data) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    /* ---------------------------------------------------------
+       Helper: safely display returned data in HTML
+    --------------------------------------------------------- */
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
     }
 
-    // Modal Control Functions
+    /* ---------------------------------------------------------
+       Google Apps Script POST helper
+    --------------------------------------------------------- */
+    async function postToGoogleSheets(payload) {
+      if (!isGoogleScriptConfigured()) {
+        throw new Error(
+          'Google Apps Script URL is not configured yet.'
+        );
+      }
+
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          'Google Apps Script returned HTTP ' + response.status
+        );
+      }
+
+      const result = await response.json();
+
+      if (!result || result.success === false) {
+        throw new Error(
+          result?.error || 'The server rejected the request.'
+        );
+      }
+
+      return result;
+    }
+
+    /* ---------------------------------------------------------
+       Google Apps Script tracking helper
+    --------------------------------------------------------- */
+    async function getFromGoogleSheets(referenceId) {
+      if (!isGoogleScriptConfigured()) {
+        throw new Error(
+          'Google Apps Script URL is not configured yet.'
+        );
+      }
+
+      const url =
+        GOOGLE_SCRIPT_URL +
+        '?action=track&referenceId=' +
+        encodeURIComponent(referenceId);
+
+      const response = await fetch(url, {
+        method: 'GET'
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          'Google Apps Script returned HTTP ' + response.status
+        );
+      }
+
+      const result = await response.json();
+
+      if (!result || result.success === false) {
+        throw new Error(
+          result?.error || 'The server rejected the request.'
+        );
+      }
+
+      return result;
+    }
+
+
+    /* =========================================================
+       MODAL CONTROL FUNCTIONS
+       ========================================================= */
+
     function openClearanceModal(type) {
-      document.getElementById('clearanceModalTitle').innerText = 'File Application: ' + type;
+
+      const form = document.getElementById('clearanceForm');
+
+      if (form) {
+        form.reset();
+      }
+
+      document.getElementById('clearanceModalTitle').innerText =
+        'File Application: ' + type;
+
+      /* IMPORTANT:
+         Set appType AFTER reset() so the selected service
+         is actually sent to Google Sheets. */
       document.getElementById('appType').value = type;
-      document.getElementById('clearanceResult').style.display = 'none';
-      document.getElementById('clearanceForm').reset();
-      document.getElementById('clearanceModal').classList.add('active');
+
+      document.getElementById('clearanceResult').style.display =
+        'none';
+
+      document.getElementById('clearanceModal').classList.add(
+        'active'
+      );
     }
+
 
     function openBlotterModal() {
-      document.getElementById('blotterResult').style.display = 'none';
-      document.getElementById('blotterForm').reset();
-      document.getElementById('blotterModal').classList.add('active');
+
+      const form = document.getElementById('blotterForm');
+
+      if (form) {
+        form.reset();
+      }
+
+      document.getElementById('blotterResult').style.display =
+        'none';
+
+      document.getElementById('blotterModal').classList.add(
+        'active'
+      );
     }
+
 
     function openTrackModal() {
-      document.getElementById('trackResult').style.display = 'none';
-      document.getElementById('trackModal').classList.add('active');
+
+      document.getElementById('trackResult').style.display =
+        'none';
+
+      document.getElementById('trackModal').classList.add(
+        'active'
+      );
     }
+
 
     function closeModal(id) {
-      document.getElementById(id).classList.remove('active');
+
+      const modal = document.getElementById(id);
+
+      if (modal) {
+        modal.classList.remove('active');
+      }
     }
 
-    // Toast Notification System
+
+    /* Close modal when clicking outside the modal window */
+    document.addEventListener('click', function(event) {
+
+      if (event.target.classList.contains('modal-overlay')) {
+        event.target.classList.remove('active');
+      }
+
+    });
+
+
+    /* Close modal with Escape key */
+    document.addEventListener('keydown', function(event) {
+
+      if (event.key === 'Escape') {
+
+        document.querySelectorAll(
+          '.modal-overlay.active'
+        ).forEach(function(modal) {
+          modal.classList.remove('active');
+        });
+
+      }
+
+    });
+
+
+    /* =========================================================
+       TOAST NOTIFICATION SYSTEM
+       ========================================================= */
+
+    let toastTimer = null;
+
     function showToast(msg) {
+
       const toast = document.getElementById('toast');
+
+      if (!toast) {
+        alert(msg);
+        return;
+      }
+
       toast.innerText = msg;
       toast.style.display = 'block';
-      setTimeout(() => {
+
+      if (toastTimer) {
+        clearTimeout(toastTimer);
+      }
+
+      toastTimer = setTimeout(function() {
         toast.style.display = 'none';
-      }, 3000);
+      }, 3500);
     }
 
-    // Submit Clearance Request
-    function handleClearanceSubmit(e) {
-      e.preventDefault();
-      const refId = 'BSI-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
-      
-      const record = {
-        refId: refId,
-        type: document.getElementById('appType').value,
-        name: document.getElementById('appFullName').value,
-        address: document.getElementById('appAddress').value,
-        phone: document.getElementById('appPhone').value,
-        purpose: document.getElementById('appPurpose').value,
-        status: 'Pending Verification',
-        dateSubmitted: new Date().toLocaleDateString()
-      };
 
-      const db = getStorageData();
-      db.requests.push(record);
-      saveStorageData(db);
+    /* =========================================================
+       LOADING STATE HELPERS
+       ========================================================= */
 
-      // UI Feedback
-      document.getElementById('clearanceForm').reset();
-      const resultBox = document.getElementById('clearanceResult');
-      resultBox.style.display = 'block';
-      resultBox.innerHTML = `
-        <strong style="color:var(--sf-green);">✓ Application Submitted Successfully!</strong><br>
-        <p style="margin-top:6px;">Your Tracking Reference ID is: <strong style="font-size:16px; color:var(--sf-orange);">${refId}</strong></p>
-        <p style="font-size:11px; color:#64748b; margin-top:4px;">Please present this Reference ID at the Barangay Hall window along with a valid ID upon document pickup.</p>
-      `;
+    function setButtonLoading(button, loading, loadingText) {
 
-      showToast('Request submitted! Reference ID: ' + refId);
-      
-      // Dynamic counter increase
-      const issuedEl = document.getElementById('issuedCount');
-      if (issuedEl) {
-        issuedEl.innerText = (parseInt(issuedEl.innerText.replace(',', '')) + 1).toLocaleString();
+      if (!button) return;
+
+      if (loading) {
+
+        if (!button.dataset.originalText) {
+          button.dataset.originalText = button.innerHTML;
+        }
+
+        button.disabled = true;
+        button.innerHTML =
+          loadingText || 'Submitting...';
+
+        button.style.opacity = '0.7';
+        button.style.cursor = 'wait';
+
+      } else {
+
+        button.disabled = false;
+
+        if (button.dataset.originalText) {
+          button.innerHTML = button.dataset.originalText;
+        }
+
+        button.style.opacity = '';
+        button.style.cursor = '';
+
       }
     }
 
-    // Submit Incident Report
-    function handleBlotterSubmit(e) {
-      e.preventDefault();
-      const ticketId = 'TKT-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
-      
-      const record = {
-        refId: ticketId,
-        complainant: document.getElementById('blotterName').value || 'Anonymous Resident',
-        type: document.getElementById('blotterType').value,
-        location: document.getElementById('blotterLocation').value,
-        details: document.getElementById('blotterDetails').value,
-        status: 'Queued for Tanod Inspection',
-        dateSubmitted: new Date().toLocaleDateString()
+
+    /* =========================================================
+       STATUS DISPLAY
+       ========================================================= */
+
+    function getStatusStyle(status) {
+
+      const value =
+        String(status || '').toLowerCase();
+
+      if (
+        value.includes('ready') ||
+        value.includes('released') ||
+        value.includes('resolved') ||
+        value.includes('closed') ||
+        value.includes('completed')
+      ) {
+        return {
+          background: '#28a745',
+          color: '#ffffff'
+        };
+      }
+
+      if (
+        value.includes('processing') ||
+        value.includes('investigation') ||
+        value.includes('action')
+      ) {
+        return {
+          background: '#0066cc',
+          color: '#ffffff'
+        };
+      }
+
+      if (
+        value.includes('rejected') ||
+        value.includes('failed')
+      ) {
+        return {
+          background: '#dc3545',
+          color: '#ffffff'
+        };
+      }
+
+      return {
+        background: '#ff6600',
+        color: '#ffffff'
       };
-
-      const db = getStorageData();
-      db.blotters.push(record);
-      saveStorageData(db);
-
-      document.getElementById('blotterForm').reset();
-      const resultBox = document.getElementById('blotterResult');
-      resultBox.style.display = 'block';
-      resultBox.innerHTML = `
-        <strong style="color:var(--sf-orange);">✓ Incident Ticket Logged!</strong><br>
-        <p style="margin-top:6px;">Ticket Reference Number: <strong style="font-size:16px; color:var(--sf-dark);">${ticketId}</strong></p>
-        <p style="font-size:11px; color:#64748b; margin-top:4px;">The Duty Tanod Officer has been notified for appropriate barangay action.</p>
-      `;
-
-      showToast('Incident report logged! Ticket ID: ' + ticketId);
     }
 
-    // Tracking Lookup Logic
-    function performTracking() {
-      const query = document.getElementById('trackInput').value.trim();
-      const resultBox = document.getElementById('trackResult');
-      
-      if (!query) {
-        showToast('Please enter a valid reference ID.');
+
+    function statusBadge(status) {
+
+      const style = getStatusStyle(status);
+
+      return `
+        <span
+          style="
+            background:${style.background};
+            color:${style.color};
+            padding:3px 8px;
+            border-radius:3px;
+            font-weight:700;
+            display:inline-block;
+          "
+        >
+          ${escapeHtml(status)}
+        </span>
+      `;
+    }
+
+
+    /* =========================================================
+       DOCUMENT APPLICATION SUBMISSION
+       ========================================================= */
+
+    async function handleClearanceSubmit(e) {
+
+      e.preventDefault();
+
+      const form =
+        document.getElementById('clearanceForm');
+
+      const submitButton =
+        form?.querySelector('button[type="submit"]');
+
+      const resultBox =
+        document.getElementById('clearanceResult');
+
+      /* Read all form fields */
+      const applicationType =
+        document.getElementById('appType').value.trim();
+
+      const fullName =
+        document.getElementById('appFullName').value.trim();
+
+      const address =
+        document.getElementById('appAddress').value.trim();
+
+      const phone =
+        document.getElementById('appPhone').value.trim();
+
+      const purpose =
+        document.getElementById('appPurpose').value;
+
+
+      /* Client-side validation */
+      if (!applicationType) {
+        showToast('Please select an application type.');
         return;
       }
 
-      const db = getStorageData();
-      const reqMatch = db.requests.find(r => r.refId.toLowerCase() === query.toLowerCase());
-      const blotterMatch = db.blotters.find(b => b.refId.toLowerCase() === query.toLowerCase());
+      if (!fullName) {
+        showToast('Please enter your full name.');
+        return;
+      }
+
+      if (!address) {
+        showToast('Please enter your complete address.');
+        return;
+      }
+
+      if (!phone) {
+        showToast('Please enter your contact number.');
+        return;
+      }
+
+      if (!purpose) {
+        showToast('Please select the purpose of your request.');
+        return;
+      }
+
+
+      try {
+
+        setButtonLoading(
+          submitButton,
+          true,
+          'Submitting Application...'
+        );
+
+
+        const result =
+          await postToGoogleSheets({
+            action: 'submitApplication',
+            applicationType: applicationType,
+            fullName: fullName,
+            address: address,
+            phone: phone,
+            purpose: purpose
+          });
+
+
+        const referenceId =
+          result.referenceId;
+
+        const status =
+          result.status || 'Pending Verification';
+
+
+        /* Show result */
+        if (resultBox) {
+
+          resultBox.style.display = 'block';
+
+          resultBox.innerHTML = `
+            <strong
+              style="color:var(--sf-green);"
+            >
+              ✓ Application Submitted Successfully!
+            </strong>
+
+            <p style="margin-top:6px;">
+              Application Type:
+              <strong>
+                ${escapeHtml(applicationType)}
+              </strong>
+            </p>
+
+            <p style="margin-top:4px;">
+              Your Tracking Reference ID is:
+              <strong
+                style="
+                  font-size:16px;
+                  color:var(--sf-orange);
+                "
+              >
+                ${escapeHtml(referenceId)}
+              </strong>
+            </p>
+
+            <p style="margin-top:6px;">
+              Status:
+              ${statusBadge(status)}
+            </p>
+
+            <p
+              style="
+                font-size:11px;
+                color:#64748b;
+                margin-top:6px;
+              "
+            >
+              Please save your Reference ID for future tracking.
+            </p>
+          `;
+
+        }
+
+
+        /* Reset form only after successful submission */
+        if (form) {
+          form.reset();
+        }
+
+        /* Keep the application type associated with the modal */
+        document.getElementById('appType').value =
+          applicationType;
+
+
+        showToast(
+          'Application submitted! Reference ID: ' +
+          referenceId
+        );
+
+
+      } catch (error) {
+
+        console.error(
+          'Application submission error:',
+          error
+        );
+
+        if (resultBox) {
+
+          resultBox.style.display = 'block';
+
+          resultBox.innerHTML = `
+            <strong
+              style="color:#dc3545;"
+            >
+              ✕ Application could not be submitted
+            </strong>
+
+            <p
+              style="
+                font-size:12px;
+                color:#64748b;
+                margin-top:6px;
+              "
+            >
+              ${escapeHtml(error.message)}
+            </p>
+          `;
+
+        }
+
+        showToast(
+          'Application submission failed.'
+        );
+
+      } finally {
+
+        setButtonLoading(
+          submitButton,
+          false
+        );
+
+      }
+
+    }
+
+
+    /* =========================================================
+       INCIDENT / REPORT CONCERN SUBMISSION
+       ========================================================= */
+
+    async function handleBlotterSubmit(e) {
+
+      e.preventDefault();
+
+      const form =
+        document.getElementById('blotterForm');
+
+      const submitButton =
+        form?.querySelector('button[type="submit"]');
+
+      const resultBox =
+        document.getElementById('blotterResult');
+
+
+      /* Read form values */
+      const complainant =
+        document.getElementById('blotterName').value.trim();
+
+      const incidentType =
+        document.getElementById('blotterType').value;
+
+      const location =
+        document.getElementById('blotterLocation').value.trim();
+
+      const details =
+        document.getElementById('blotterDetails').value.trim();
+
+
+      /* Validation */
+      if (!incidentType) {
+        showToast('Please select an incident type.');
+        return;
+      }
+
+      if (!location) {
+        showToast('Please enter the incident location.');
+        return;
+      }
+
+      if (!details) {
+        showToast(
+          'Please provide a detailed incident description.'
+        );
+        return;
+      }
+
+
+      try {
+
+        setButtonLoading(
+          submitButton,
+          true,
+          'Submitting Incident...'
+        );
+
+
+        const result =
+          await postToGoogleSheets({
+            action: 'submitIncident',
+            complainant:
+              complainant || 'Anonymous Resident',
+            incidentType: incidentType,
+            location: location,
+            details: details
+          });
+
+
+        const ticketId =
+          result.referenceId;
+
+        const status =
+          result.status ||
+          'Queued for Tanod Inspection';
+
+
+        if (resultBox) {
+
+          resultBox.style.display = 'block';
+
+          resultBox.innerHTML = `
+            <strong
+              style="color:var(--sf-orange);"
+            >
+              ✓ Incident Ticket Logged!
+            </strong>
+
+            <p style="margin-top:6px;">
+              Ticket Reference Number:
+              <strong
+                style="
+                  font-size:16px;
+                  color:var(--sf-dark);
+                "
+              >
+                ${escapeHtml(ticketId)}
+              </strong>
+            </p>
+
+            <p style="margin-top:6px;">
+              Status:
+              ${statusBadge(status)}
+            </p>
+
+            <p
+              style="
+                font-size:11px;
+                color:#64748b;
+                margin-top:6px;
+              "
+            >
+              The Duty Tanod Officer has been notified for
+              appropriate barangay action.
+            </p>
+          `;
+
+        }
+
+
+        if (form) {
+          form.reset();
+        }
+
+
+        showToast(
+          'Incident report logged! Ticket ID: ' +
+          ticketId
+        );
+
+
+      } catch (error) {
+
+        console.error(
+          'Incident submission error:',
+          error
+        );
+
+        if (resultBox) {
+
+          resultBox.style.display = 'block';
+
+          resultBox.innerHTML = `
+            <strong
+              style="color:#dc3545;"
+            >
+              ✕ Incident report could not be submitted
+            </strong>
+
+            <p
+              style="
+                font-size:12px;
+                color:#64748b;
+                margin-top:6px;
+              "
+            >
+              ${escapeHtml(error.message)}
+            </p>
+          `;
+
+        }
+
+        showToast(
+          'Incident submission failed.'
+        );
+
+      } finally {
+
+        setButtonLoading(
+          submitButton,
+          false
+        );
+
+      }
+
+    }
+
+
+    /* =========================================================
+       TRACKING LOOKUP
+       ========================================================= */
+
+    async function performTracking() {
+
+      const input =
+        document.getElementById('trackInput');
+
+      const resultBox =
+        document.getElementById('trackResult');
+
+      if (!input || !resultBox) {
+        return;
+      }
+
+
+      const query =
+        input.value.trim();
+
+
+      if (!query) {
+
+        showToast(
+          'Please enter a valid reference ID.'
+        );
+
+        return;
+      }
+
 
       resultBox.style.display = 'block';
 
-      if (reqMatch) {
+      resultBox.innerHTML = `
+        <strong style="color:var(--sf-blue);">
+          Checking record...
+        </strong>
+
+        <p
+          style="
+            font-size:12px;
+            color:#64748b;
+            margin-top:6px;
+          "
+        >
+          Please wait while we search the barangay database.
+        </p>
+      `;
+
+
+      try {
+
+        const result =
+          await getFromGoogleSheets(query);
+
+
+        if (
+          result.success &&
+          result.found
+        ) {
+
+          /* -------------------------------
+             DOCUMENT APPLICATION
+          ------------------------------- */
+
+          if (
+            result.recordType ===
+            'Application'
+          ) {
+
+            resultBox.innerHTML = `
+              <strong
+                style="color:var(--sf-blue);"
+              >
+                Document Application Record Found
+              </strong>
+
+              <div
+                style="
+                  margin-top:8px;
+                  font-size:12px;
+                "
+              >
+
+                <p>
+                  <strong>Reference ID:</strong>
+                  ${escapeHtml(result.referenceId)}
+                </p>
+
+                <p>
+                  <strong>Type:</strong>
+                  ${escapeHtml(result.applicationType)}
+                </p>
+
+                <p>
+                  <strong>Applicant:</strong>
+                  ${escapeHtml(result.name)}
+                </p>
+
+                <p>
+                  <strong>Date Filed:</strong>
+                  ${escapeHtml(result.dateSubmitted)}
+                </p>
+
+                <p>
+                  <strong>Status:</strong>
+                  ${statusBadge(result.status)}
+                </p>
+
+              </div>
+            `;
+
+          }
+
+          /* -------------------------------
+             INCIDENT REPORT
+          ------------------------------- */
+
+          else if (
+            result.recordType ===
+            'Incident Report'
+          ) {
+
+            resultBox.innerHTML = `
+              <strong
+                style="color:var(--sf-orange);"
+              >
+                Incident Report Record Found
+              </strong>
+
+              <div
+                style="
+                  margin-top:8px;
+                  font-size:12px;
+                "
+              >
+
+                <p>
+                  <strong>Ticket ID:</strong>
+                  ${escapeHtml(result.referenceId)}
+                </p>
+
+                <p>
+                  <strong>Category:</strong>
+                  ${escapeHtml(result.incidentType)}
+                </p>
+
+                <p>
+                  <strong>Location:</strong>
+                  ${escapeHtml(result.location)}
+                </p>
+
+                <p>
+                  <strong>Date Filed:</strong>
+                  ${escapeHtml(result.dateSubmitted)}
+                </p>
+
+                <p>
+                  <strong>Status:</strong>
+                  ${statusBadge(result.status)}
+                </p>
+
+              </div>
+            `;
+
+          }
+
+          else {
+
+            resultBox.innerHTML = `
+              <strong style="color:var(--sf-blue);">
+                Record Found
+              </strong>
+
+              <p
+                style="
+                  font-size:12px;
+                  color:#64748b;
+                  margin-top:6px;
+                "
+              >
+                Reference ID:
+                ${escapeHtml(result.referenceId)}
+              </p>
+
+              <p style="margin-top:6px;">
+                Status:
+                ${statusBadge(result.status)}
+              </p>
+            `;
+
+          }
+
+        }
+
+        else {
+
+          resultBox.innerHTML = `
+            <strong style="color:#e11d48;">
+              No matching record found
+            </strong>
+
+            <p
+              style="
+                font-size:12px;
+                color:#64748b;
+                margin-top:4px;
+              "
+            >
+              Please verify your Reference ID
+              (BSI-2026-XXXX or TKT-2026-XXXX).
+            </p>
+          `;
+
+        }
+
+
+      } catch (error) {
+
+        console.error(
+          'Tracking error:',
+          error
+        );
+
         resultBox.innerHTML = `
-          <strong style="color:var(--sf-blue);">Document Application Record Found</strong><br>
-          <div style="margin-top:8px; font-size:12px;">
-            <p><strong>Type:</strong> ${reqMatch.type}</p>
-            <p><strong>Applicant:</strong> ${reqMatch.name}</p>
-            <p><strong>Date Filed:</strong> ${reqMatch.dateSubmitted}</p>
-            <p><strong>Status:</strong> <span style="background:#ff6600; color:#fff; padding:2px 6px; border-radius:3px; font-weight:700;">${reqMatch.status}</span></p>
-          </div>
+          <strong style="color:#dc3545;">
+            Database connection error
+          </strong>
+
+          <p
+            style="
+              font-size:12px;
+              color:#64748b;
+              margin-top:6px;
+            "
+          >
+            ${escapeHtml(error.message)}
+          </p>
         `;
-      } else if (blotterMatch) {
-        resultBox.innerHTML = `
-          <strong style="color:var(--sf-orange);">Incident Report Record Found</strong><br>
-          <div style="margin-top:8px; font-size:12px;">
-            <p><strong>Category:</strong> ${blotterMatch.type}</p>
-            <p><strong>Location:</strong> ${blotterMatch.location}</p>
-            <p><strong>Date Filed:</strong> ${blotterMatch.dateSubmitted}</p>
-            <p><strong>Status:</strong> <span style="background:#222; color:#fff; padding:2px 6px; border-radius:3px; font-weight:700;">${blotterMatch.status}</span></p>
-          </div>
-        `;
-      } else {
-        resultBox.innerHTML = `
-          <strong style="color:#e11d48;">No matching record found</strong>
-          <p style="font-size:12px; color:#64748b; margin-top:4px;">Please verify your Reference ID (e.g. BSI-2026-XXXX or TKT-2026-XXXX) or visit the Barangay Hall window.</p>
-        `;
+
       }
+
     }
+
+
+    /* =========================================================
+       QUICK TRACK LOOKUP
+       ========================================================= */
 
     function quickTrackLookup() {
-      const val = document.getElementById('quickTrackInput').value.trim();
-      if (!val) {
-        showToast('Please enter a tracking ID.');
+
+      const input =
+        document.getElementById(
+          'quickTrackInput'
+        );
+
+      if (!input) {
         return;
       }
+
+      const val =
+        input.value.trim();
+
+
+      if (!val) {
+
+        showToast(
+          'Please enter a tracking ID.'
+        );
+
+        return;
+      }
+
+
       openTrackModal();
-      document.getElementById('trackInput').value = val;
+
+      document.getElementById(
+        'trackInput'
+      ).value = val;
+
       performTracking();
+
     }
 
-    /* ==========================================
-BARANGAY PHOTO GALLERY SLIDER
-========================================== */
 
-let galleryIndex = 0;
-let galleryTimer;
+    /* =========================================================
+       GLOBAL PORTAL SERVICE SEARCH
+       ========================================================= */
 
-function getGalleryVisibleCount() {
-if (window.innerWidth <= 600) {
-return 1;
-}
+    function filterServices() {
 
-if (window.innerWidth <= 900) {
-return 2;
-}
+      const input =
+        document.getElementById('globalSearch');
 
-return 3;
-}
+      const grid =
+        document.getElementById('servicesGrid');
 
-function getGalleryCardWidth() {
-const gallery = document.getElementById('barangayGallery');
-
-if (!gallery) return 0;
-
-const card = gallery.querySelector('.gallery-card');
-
-if (!card) return 0;
-
-const cardWidth = card.offsetWidth;
-const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
-
-return cardWidth + gap;
-}
-
-function updateGallery() {
-const gallery = document.getElementById('barangayGallery');
-const dotsContainer = document.getElementById('galleryDots');
-
-if (!gallery || !dotsContainer) return;
-
-const cards = gallery.querySelectorAll('.gallery-card');
-const visibleCount = getGalleryVisibleCount();
-
-const maxIndex = Math.max(
-0,
-cards.length - visibleCount
-);
-
-if (galleryIndex > maxIndex) {
-galleryIndex = 0;
-}
-
-const cardWidth = getGalleryCardWidth();
-
-gallery.style.transform =
-`translateX(-${galleryIndex * cardWidth}px)`;
-
-dotsContainer.innerHTML = '';
-
-for (let i = 0; i <= maxIndex; i++) {
+      if (!input || !grid) {
+        return;
+      }
 
 
-const dot = document.createElement('button');
-
-dot.className =
-  'gallery-dot' +
-  (i === galleryIndex ? ' active' : '');
-
-dot.setAttribute(
-  'aria-label',
-  `Go to gallery slide ${i + 1}`
-);
-
-dot.onclick = function () {
-  galleryIndex = i;
-  updateGallery();
-  restartGalleryAutoSlide();
-};
-
-dotsContainer.appendChild(dot);
-
-}
-}
-
-function moveGallery(direction) {
-const gallery = document.getElementById('barangayGallery');
-
-if (!gallery) return;
-
-const cards = gallery.querySelectorAll('.gallery-card');
-const visibleCount = getGalleryVisibleCount();
-
-const maxIndex = Math.max(
-0,
-cards.length - visibleCount
-);
-
-galleryIndex += direction;
-
-if (galleryIndex > maxIndex) {
-galleryIndex = 0;
-}
-
-if (galleryIndex < 0) {
-galleryIndex = maxIndex;
-}
-
-updateGallery();
-restartGalleryAutoSlide();
-}
-
-function startGalleryAutoSlide() {
-
-clearInterval(galleryTimer);
-
-galleryTimer = setInterval(function () {
-moveGallery(1);
-}, 4000);
-}
-
-function restartGalleryAutoSlide() {
-
-clearInterval(galleryTimer);
-
-startGalleryAutoSlide();
-}
-
-window.addEventListener('resize', function () {
-updateGallery();
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-updateGallery();
-startGalleryAutoSlide();
-});
-    
-    // Automatic Image Slider Rotation Logic
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.transition-slider-container .slide');
-  if (!slides.length) return;
-
-  let currentSlide = 0;
-  const slideDuration = 4500; // Time in milliseconds before changing slides (4.5s)
-
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }, slideDuration);
-});
+      const query =
+        input.value
+          .trim()
+          .toLowerCase();
 
 
-  </script>
-  
-  <!-- Search Results Modal -->
+      const cards =
+        grid.querySelectorAll('.sf-card');
+
+
+      let visibleCount = 0;
+
+
+      cards.forEach(function(card) {
+
+        const title =
+          (
+            card.dataset.title ||
+            card.innerText ||
+            ''
+          ).toLowerCase();
+
+
+        const match =
+          !query ||
+          title.includes(query);
+
+
+        card.style.display =
+          match ? '' : 'none';
+
+
+        if (match) {
+          visibleCount++;
+        }
+
+      });
+
+
+      if (query) {
+
+        document.getElementById(
+          'services'
+        )?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+
+        showToast(
+          visibleCount +
+          ' matching service' +
+          (visibleCount === 1 ? '' : 's') +
+          ' found.'
+        );
+
+      }
+
+    }
+
+
+    /* Search when pressing Enter */
+    document.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (
+          event.key === 'Enter' &&
+          event.target?.id === 'globalSearch'
+        ) {
+
+          event.preventDefault();
+          filterServices();
+
+        }
+
+      }
+    );
+
+
+    /* =========================================================
+       BARANGAY PHOTO GALLERY SLIDER
+       ========================================================= */
+
+    let galleryIndex = 0;
+    let galleryTimer;
+
+    function getGalleryVisibleCount() {
+
+      if (window.innerWidth <= 600) {
+        return 1;
+      }
+
+      if (window.innerWidth <= 900) {
+        return 2;
+      }
+
+      return 3;
+    }
+
+
+    function getGalleryCardWidth() {
+
+      const gallery =
+        document.getElementById(
+          'barangayGallery'
+        );
+
+      if (!gallery) {
+        return 0;
+      }
+
+
+      const card =
+        gallery.querySelector(
+          '.gallery-card'
+        );
+
+      if (!card) {
+        return 0;
+      }
+
+
+      const cardWidth =
+        card.offsetWidth;
+
+      const gap =
+        parseFloat(
+          getComputedStyle(gallery).gap
+        ) || 0;
+
+
+      return cardWidth + gap;
+    }
+
+
+    function updateGallery() {
+
+      const gallery =
+        document.getElementById(
+          'barangayGallery'
+        );
+
+      const dotsContainer =
+        document.getElementById(
+          'galleryDots'
+        );
+
+
+      if (!gallery || !dotsContainer) {
+        return;
+      }
+
+
+      const cards =
+        gallery.querySelectorAll(
+          '.gallery-card'
+        );
+
+      const visibleCount =
+        getGalleryVisibleCount();
+
+
+      const maxIndex =
+        Math.max(
+          0,
+          cards.length - visibleCount
+        );
+
+
+      if (galleryIndex > maxIndex) {
+        galleryIndex = 0;
+      }
+
+
+      const cardWidth =
+        getGalleryCardWidth();
+
+
+      gallery.style.transform =
+        `translateX(-${galleryIndex * cardWidth}px)`;
+
+
+      dotsContainer.innerHTML = '';
+
+
+      for (
+        let i = 0;
+        i <= maxIndex;
+        i++
+      ) {
+
+        const dot =
+          document.createElement('button');
+
+        dot.className =
+          'gallery-dot' +
+          (
+            i === galleryIndex
+              ? ' active'
+              : ''
+          );
+
+
+        dot.setAttribute(
+          'aria-label',
+          `Go to gallery slide ${i + 1}`
+        );
+
+
+        dot.onclick =
+          function() {
+
+            galleryIndex = i;
+
+            updateGallery();
+
+            restartGalleryAutoSlide();
+
+          };
+
+
+        dotsContainer.appendChild(dot);
+
+      }
+
+    }
+
+
+    function moveGallery(direction) {
+
+      const gallery =
+        document.getElementById(
+          'barangayGallery'
+        );
+
+      if (!gallery) {
+        return;
+      }
+
+
+      const cards =
+        gallery.querySelectorAll(
+          '.gallery-card'
+        );
+
+      const visibleCount =
+        getGalleryVisibleCount();
+
+
+      const maxIndex =
+        Math.max(
+          0,
+          cards.length - visibleCount
+        );
+
+
+      galleryIndex += direction;
+
+
+      if (galleryIndex > maxIndex) {
+        galleryIndex = 0;
+      }
+
+
+      if (galleryIndex < 0) {
+        galleryIndex = maxIndex;
+      }
+
+
+      updateGallery();
+
+      restartGalleryAutoSlide();
+
+    }
+
+
+    function startGalleryAutoSlide() {
+
+      clearInterval(galleryTimer);
+
+      galleryTimer =
+        setInterval(
+          function() {
+            moveGallery(1);
+          },
+          4000
+        );
+
+    }
+
+
+    function restartGalleryAutoSlide() {
+
+      clearInterval(galleryTimer);
+
+      startGalleryAutoSlide();
+
+    }
+
+
+    window.addEventListener(
+      'resize',
+      function() {
+        updateGallery();
+      }
+    );
+
+
+    /* =========================================================
+       IMAGE TRANSITION SLIDER
+       ========================================================= */
+
+    function startImageSlider() {
+
+      const slides =
+        document.querySelectorAll(
+          '.transition-slider-container .slide'
+        );
+
+
+      if (!slides.length) {
+        return;
+      }
+
+
+      let currentSlide = 0;
+
+      const slideDuration = 4500;
+
+
+      setInterval(
+        function() {
+
+          slides[
+            currentSlide
+          ].classList.remove(
+            'active'
+          );
+
+
+          currentSlide =
+            (
+              currentSlide + 1
+            ) % slides.length;
+
+
+          slides[
+            currentSlide
+          ].classList.add(
+            'active'
+          );
+
+        },
+        slideDuration
+      );
+
+    }
+
+
+    /* =========================================================
+       INITIALIZATION
+       ========================================================= */
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+
+        updateGallery();
+        startGalleryAutoSlide();
+        startImageSlider();
+
+        /* Helpful developer message */
+        if (!isGoogleScriptConfigured()) {
+
+          console.warn(
+            'Barangay Santa Ines Portal: ' +
+            'GOOGLE_SCRIPT_URL has not been configured yet.'
+          );
+
+        }
+
+      }
+    );
+</script>
+<!-- Search Results Modal -->
 <div class="modal-overlay search-results-modal" id="searchResultsModal">
-  <div class="modal-window search-results-window">
-    <div class="modal-header search-results-header">
-      <div style="display:flex; align-items:center; gap:12px;">
-        <div class="modal-title">Search Results</div>
-        <span class="search-results-badge" id="searchQueryBadge">0 Found</span>
-      </div>
-      <button class="modal-close" onclick="closeSearchModal()">&times;</button>
-    </div>
-    <div class="modal-body search-results-body">
-      <div id="searchResultsContainer"></div>
-    </div>
-  </div>
+<div class="modal-window search-results-window">
+<div class="modal-header search-results-header">
+<div style="display:flex; align-items:center; gap:12px;">
+<div class="modal-title">Search Results</div>
+<span class="search-results-badge" id="searchQueryBadge">0 Found</span>
+</div>
+<button class="modal-close" onclick="closeSearchModal()">×</button>
+</div>
+<div class="modal-body search-results-body">
+<div id="searchResultsContainer"></div>
+</div>
+</div>
 </div>
 <script src="search.js"></script>
-
 </body>
 </html>
